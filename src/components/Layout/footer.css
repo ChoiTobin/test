@@ -1,0 +1,23 @@
+.footer-border-box-left{
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+}
+.footer-border-box-left-center{
+    width: 80%;
+    margin: 0 auto;
+}
+.footer-border-box-style{
+    border: 1px solid gold;
+    border-radius: 20px;
+    height: 40px;
+}
+.footer-border{
+    color: white;
+}
+
+/* left */
+.footer-border-box-right{
+    width: 60%;
+}
