@@ -1,0 +1,56 @@
+.header-display-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top-left{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 50px 50px 0;;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 30px;
+    height: 60%;
+    display: flex;
+}
+.header-top-left-image{
+        background-image: url('../../image/pngwing.png');
+        background-size : contain;
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+}
+.header-top-font{
+    color: gold;
+
+}
+.circle{
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background: #F2994A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+
+.header-top-center{
+    background-color: black;
+    height: 50%;
+    width: 30%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 30%;
+    opacity: 0.6;
+}
+.header-top-right{
+    background-color: yellow;
+    height: 50%;
+    width: 30%;
+    border-bottom-right-radius: 30%;
+    border-top-right-radius: 30%;
+}

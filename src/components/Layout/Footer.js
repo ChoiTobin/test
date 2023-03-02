@@ -4,7 +4,6 @@ import Container from "@mui/material/Container";
 import Marquee from "react-fast-marquee";
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-
 import LocationOnIcon from '@mui/icons-material/LocationOn';
  import  {makeStyles} from "@material-ui/core/styles";
  import HomeIcon from '@mui/icons-material/Home';
