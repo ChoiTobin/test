@@ -33,7 +33,7 @@ function Home() {
                                   부서의 업무를 과별로 구분하여 <br/> 한눈에 알아볼 수 있도록 소개합니다.
                                 </div>
                                 <div>
-                                  <BusinessCenterIcon sx={{color:"gold",marginLeft:"20px",marginTop:"40px",width:"100px",height:"60px"}}></BusinessCenterIcon>
+                                  <BusinessCenterIcon sx={{color:"rgb(178, 115, 33)",marginLeft:"20px",marginTop:"40px",width:"100px",height:"60px"}}></BusinessCenterIcon>
                                 </div>
                               
                             </div>
@@ -49,7 +49,7 @@ function Home() {
                                 좌석배치도 및 담당자와 주요 업무를<br/> 소개합니다.
                               </div>
                               <div>
-                                <KeyboardIcon sx={{color:"gold",marginLeft:"20px",marginTop:"40px",width:"100px",height:"60px"}}></KeyboardIcon>
+                                <KeyboardIcon sx={{color:"white",marginLeft:"20px",marginTop:"40px",width:"100px",height:"60px"}}></KeyboardIcon>
                               </div>
                             </div>
                           </div>
