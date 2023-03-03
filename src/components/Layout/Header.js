@@ -1,13 +1,39 @@
-import React from 'react'
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import './header.css';
 import HomeIcon from '@mui/icons-material/Home';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import BottomNavigation from '@mui/material/BottomNavigation';
+import React, { useState, useCallback, useEffect } from "react";
+
+
 
 function Header() {
+  
+  //useCallback사용해서 시간 타임 
+  let date = new Date();
+  let dateYear = date.getFullYear();
+  let dateMonth = date.getMonth() + 1; 
+  let dateday = date.getDate();
+  let datemonth = date.getDay();
+  let dateHours = date.getHours();
+  
+  let arr = ["일", "월", "화", "수", "목", "금", "토"];
+  let result = arr[datemonth];
+  let ampm = dateHours <12 ? "AM" : "PM"
 
+  const [time, setTime] = useState(date.getMinutes());
+
+  const updateTime = useCallback(() => {
+    setTime(new Date().getMinutes());
+  }, []);
+
+  useEffect(() => {
+    const intervalId = setInterval(updateTime, 1000);
+    return () => clearInterval(intervalId);
+  }, [updateTime]);
+
+  let sum = `${dateYear}.${dateMonth}.${dateday} (${result}) ${dateHours}:${time} ${ampm}`;
 
   return (
     <>
@@ -16,16 +42,15 @@ function Header() {
             <div className='header-top-left'>
               <div className='header-top-left-image'></div>
               <div className='header-top-font'>차세대ICT융합센터</div>
-              <BottomNavigation
-                className='circle'
-                showLabels
-                sx={{ bgcolor: "rgb(165, 147, 40)" }}
-                >
-              <BottomNavigationAction sx={{color:"white"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
-              </BottomNavigation>
+                <BottomNavigation
+                  className='circle'
+                  showLabels
+                  sx={{ bgcolor: "rgb(165, 147, 40)" }}
+                  >
+                <BottomNavigationAction sx={{color:"white"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
+                </BottomNavigation>
             </div>
-          <div className='header-top-center'>2어떻게나오느지</div>
-          <div className='header-top-right'>3</div>
+            <div className='header-top-right'>{sum}</div>
         </Box>
     </Container>
     </>

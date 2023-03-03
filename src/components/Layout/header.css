@@ -31,21 +31,32 @@
     margin-right: 10px;
     margin-left: 10px;
     border-radius: 50%;
+    
 }
 
 
 .header-top-center{
-    background-color: black;
-    height: 50%;
-    width: 30%;
-    border-bottom-right-radius: 30%;
-    border-top-right-radius: 30%;
-    opacity: 0.6;
+    margin-top: 10px;
+    border-top:70px solid black;
+    opacity: 0.4;
+    border-left: 40px solid transparent;
+    border-right:40px solid transparent;
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
 }
+
+
+
+
 .header-top-right{
-    background-color: yellow;
-    height: 50%;
-    width: 30%;
-    border-bottom-right-radius: 30%;
-    border-top-right-radius: 30%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 0 50px 50px 0;;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 30px;
+    height: 60%;
+    color: white;
 }
