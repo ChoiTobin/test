@@ -40,66 +40,68 @@ margin: 0 auto;
 
 }
 
-.box8{
-        margin-top: 100px;
+.box7{
+        margin-top: 90px;
         width: 100%;
         height: 100%;
 }
-
-.box10{
-        width: 100%;
-        height: 33.33%;
-}
-.box11{
-
+.box8{  
         margin: 0 auto;
-        margin-top: 100px;
+        margin-top: 90px;
         width: 80%;
         height: 50%;
         background-color: white;
         opacity: 0.6;
         border: 4px solid rgb(223, 220, 220);
         border-radius: 10px;
-
+}
+.box8-1{
+        margin-left: 20px;
 }
 
-.box12{
+.box9{
+        color: white;
         margin: 0 auto;
         margin-top: 10px;
         width: 80%;
         height: 50%;
-        background-color: burlywood;
-        opacity: 0.6;
+        background-color: rgb(178, 115, 33);
+        opacity: 0.8;
         border: 4px solid rgb(223, 220, 220);
         border-radius: 10px;
-
+        background-color: rgba(197, 125, 18, 0.5)
+}
+.box9-1{
+        margin-left: 20px;
 }
 
-.box13{
+.box10{
         
         border: 4px solid white;
         border-radius: 10px;
         width: 70%;
-        height: 30%;
-        opacity: 0.4;
+        height: 32%;
         background-color: black;
+        background-color: rgba(0, 0, 0, 0.5)
+
 }
-.box14{
+.box11{
         border: 4px solid white;
         border-radius: 10px;
         margin-top: 10px;
         width: 70%;
-        height: 33%;
-        opacity: 0.4;
+        height: 32%;
         background-color: black;
-}
-.box15{
+        background-color: rgba(0, 0, 0, 0.5)
+
         
+}
+.box12{
         border: 4px solid white;
         border-radius: 10px;
         margin-top: 10px;
         width: 70%;
-        height: 33%;
+        height: 32%;
         background-color: black;
-        opacity: 0.4;
+        background-color: rgba(0, 0, 0, 0.5)
 }

@@ -43,7 +43,7 @@ function Header() {
                 <BottomNavigation
                   className='circle'
                   showLabels
-                  sx={{ bgcolor: "rgb(165, 147, 40)" }}
+                  sx={{ bgcolor: "rgb(178, 115, 33)" }}
                   >
                 <BottomNavigationAction sx={{color:"white"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
                 </BottomNavigation>

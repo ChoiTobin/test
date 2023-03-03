@@ -3,6 +3,7 @@ import Header from '../components/Layout/Header'
 import Footer from '../components/Layout/Footer'
 import image from '../image/HOME.png'
 import home from "./home.css"; 
+import { color, fontSize } from '@mui/system';
 
 function Home() {
   return (
@@ -18,15 +19,51 @@ function Home() {
             <div className='box3' style={{display:"flex"}}>
                 <div className='box4'>
                     <div className='box6'>
-                      <div className='box11'></div>
-                      <div className='box12'></div>
+                      <div className='box8'>
+                        <div className='box8-1'>
+                            <div>
+                              <h2>부서소개</h2>
+                            </div>
+                            <div>
+                              부서의 업무를 과별로 구분하여 <br/> 한눈에 알아볼 수 있도록 소개합니다.
+                            </div>
+                        </div>
+                      </div>
+                      <div className='box9'>
+                        <div className='box9-1'>
+                            <div>
+                              <h2>직원안내</h2>
+                            </div>
+                            <div >
+                              좌석배치도 및 담당자와 주요 업무를<br/> 소개합니다.
+                            </div>
+                          </div>
+                      </div>
                     </div>
                 </div>
                 <div className='box5'>
-                    <div className='box8'>
-                        <div className='box13'></div>
-                        <div className='box14'></div>
-                        <div className='box15'></div>
+                    <div className='box7'>
+                      <div className='box10'  style={{display:"flex",color:"white",textAlign:"center",alignItems:"center",fontSize:"18px"}}>
+                        <div>이미지</div>
+                        <div>
+                          <div>포토갤러리</div>
+                          <div>Photo Gallery</div>
+                        </div>
+                      </div>
+                      <div className='box11' style={{display:"flex",color:"white",textAlign:"center",alignItems:"center",fontSize:"18px"}}>
+                        <div>이미지</div>
+                        <div>
+                          <div>청사안내</div>
+                          <div>Hall Infomation</div>
+                        </div>
+                      </div>
+                      <div className='box12' style={{display:"flex",color:"white",textAlign:"center",alignItems:"center" ,fontSize:"18px"}}>
+                        <div>이미지</div>
+                        <div>
+                          <div>공지사항</div>
+                          <div>Notice & News</div>
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
