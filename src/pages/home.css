@@ -2,3 +2,104 @@
         background-image: url('../image/HOME.png');
         background-size : cover;
 }
+.box0{
+width: 100%;
+margin: 0 auto;
+}
+.box1{
+        width: 50%;
+        height: 100%;
+}
+
+.box2{
+        margin-top: 100px;
+        margin-left:15%;
+        width: 80%;
+        height: 50%;
+        font-size: 110px;
+        font-weight: 400;
+        color: white;
+        font-family: 'Nanum Brush Script',cursive;
+}
+.box3{
+        width: 50%;
+        height: 100%;
+}
+.box4{
+        width: 60%;
+        height: 100%;
+}
+.box5{
+        width: 40%;
+        height: 50%;
+}
+.box6{
+        width: 100%;
+        height: 50%;
+        
+
+}
+
+.box8{
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+}
+
+.box10{
+        width: 100%;
+        height: 33.33%;
+}
+.box11{
+
+        margin: 0 auto;
+        margin-top: 100px;
+        width: 80%;
+        height: 50%;
+        background-color: white;
+        opacity: 0.6;
+        border: 4px solid rgb(223, 220, 220);
+        border-radius: 10px;
+
+}
+
+.box12{
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 80%;
+        height: 50%;
+        background-color: burlywood;
+        opacity: 0.6;
+        border: 4px solid rgb(223, 220, 220);
+        border-radius: 10px;
+
+}
+
+.box13{
+        
+        border: 4px solid white;
+        border-radius: 10px;
+        width: 70%;
+        height: 30%;
+        opacity: 0.4;
+        background-color: black;
+}
+.box14{
+        border: 4px solid white;
+        border-radius: 10px;
+        margin-top: 10px;
+        width: 70%;
+        height: 33%;
+        opacity: 0.4;
+        background-color: black;
+}
+.box15{
+        
+        border: 4px solid white;
+        border-radius: 10px;
+        margin-top: 10px;
+        width: 70%;
+        height: 33%;
+        background-color: black;
+        opacity: 0.4;
+}

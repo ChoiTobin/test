@@ -5,11 +5,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import React, { useState, useCallback, useEffect } from "react";
-
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 
 function Header() {
-  
   //useCallback사용해서 시간 타임 
   let date = new Date();
   let dateYear = date.getFullYear();
@@ -17,7 +16,6 @@ function Header() {
   let dateday = date.getDate();
   let datemonth = date.getDay();
   let dateHours = date.getHours();
-  
   let arr = ["일", "월", "화", "수", "목", "금", "토"];
   let result = arr[datemonth];
   let ampm = dateHours <12 ? "AM" : "PM"
@@ -50,7 +48,10 @@ function Header() {
                 <BottomNavigationAction sx={{color:"white"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
                 </BottomNavigation>
             </div>
-            <div className='header-top-right'>{sum}</div>
+            <div className='header-top-right'>
+              <AccessTimeIcon className="header-top-right-clock"></AccessTimeIcon>
+              {sum}
+            </div>
         </Box>
     </Container>
     </>
