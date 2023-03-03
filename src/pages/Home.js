@@ -46,21 +46,21 @@ function Home() {
                       <div className='box10'  style={{display:"flex",color:"white",textAlign:"center",alignItems:"center",fontSize:"18px"}}>
                         <div>이미지</div>
                         <div>
-                          <div>포토갤러리</div>
+                          <div style={{textAlign:"left"}}>포토갤러리</div>
                           <div>Photo Gallery</div>
                         </div>
                       </div>
                       <div className='box11' style={{display:"flex",color:"white",textAlign:"center",alignItems:"center",fontSize:"18px"}}>
                         <div>이미지</div>
                         <div>
-                          <div>청사안내</div>
+                          <div style={{textAlign:"left"}}>청사안내</div>
                           <div>Hall Infomation</div>
                         </div>
                       </div>
                       <div className='box12' style={{display:"flex",color:"white",textAlign:"center",alignItems:"center" ,fontSize:"18px"}}>
                         <div>이미지</div>
                         <div>
-                          <div>공지사항</div>
+                          <div style={{textAlign:"left"}}>공지사항</div>
                           <div>Notice & News</div>
                         </div>
                       </div>
