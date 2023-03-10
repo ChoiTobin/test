@@ -13,12 +13,12 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
  import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
  import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
  import { useNavigate } from 'react-router-dom'
- import './footer.css';
+ import '../../shared/styled/footer.css';
+
 
 function Footer() {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
-  
   
    const useStyles = makeStyles({
      bottomNavigation: {
@@ -33,6 +33,7 @@ function Footer() {
 
   return (
     <>
+
       <Container maxWidth="xl" disableGutters>
         <Box sx={{ height: "10vh", bgcolor: "black", opacity: "0.9", display: "flex" }}>
           <div className='footer-border-box-left'>
@@ -54,8 +55,8 @@ function Footer() {
                 onChange={(event, newValue) => {
                   setValue(newValue);
                 }}>
-                <BottomNavigationAction sx={{ color: "white" }} label="처음으로" icon={<HomeIcon sx={{ color: value === 0 ? "gold" : "white" }} />} />
-                <BottomNavigationAction onClick={()=>{navigate('Employee')}} sx={{ color: "white" }} label="직원안내" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/')}} sx={{ color: "white" }} label="처음으로" icon={<HomeIcon sx={{ color: value === 0 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/Employee')}} sx={{ color: "white" }} label="직원안내" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
                 <BottomNavigationAction sx={{ color: "white" }} label="청사안내" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
                 <BottomNavigationAction sx={{ color: "white" }} label="홍보콘텐츠" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
                 <BottomNavigationAction sx={{ color: "white" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />

@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../components/Layout/Header'
 import Footer from '../components/Layout/Footer'
 import image from '../image/HOME.png'
-import home from "./home.css"; 
+import "../shared/styled/home.css"; 
 import { color, fontSize } from '@mui/system';
 import PhotoSizeSelectActualIcon from '@mui/icons-material/PhotoSizeSelectActual';
 import RoomIcon from '@mui/icons-material/Room';
@@ -12,7 +12,6 @@ import KeyboardIcon from '@mui/icons-material/Keyboard';
 function Home() {
   return (
     <>
-      <div className='Home-body-image'>
         <Header/>
           <div className='box0' style={{  height: "80vh" ,display:"flex"} }>
             <div className='box1'>
@@ -83,8 +82,7 @@ function Home() {
                 </div>
             </div>
           </div>
-        <Footer/>
-      </div>
+
     </>
   )
 }
