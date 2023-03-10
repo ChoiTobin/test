@@ -4,8 +4,7 @@ function Employee() {
   return (
     <>
     <Header/>
-    
-    <div>Employee</div>
+    <div style={{  height: "80vh" ,display:"flex"}} ></div>
     </>
 
   )

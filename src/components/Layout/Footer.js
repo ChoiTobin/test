@@ -5,35 +5,33 @@ import Marquee from "react-fast-marquee";
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
- import  {makeStyles} from "@material-ui/core/styles";
- import HomeIcon from '@mui/icons-material/Home';
- import KeyboardIcon from '@mui/icons-material/Keyboard';
- import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
- import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
- import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
- import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
- import { useNavigate } from 'react-router-dom'
- import '../../shared/styled/footer.css';
+import  {makeStyles} from "@material-ui/core/styles";
+import HomeIcon from '@mui/icons-material/Home';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import { useNavigate } from 'react-router-dom'
+import '../../shared/styled/footer.css';
 
 
 function Footer() {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
   
-   const useStyles = makeStyles({
-     bottomNavigation: {
-       "& .Mui-selected": {
-         backgroundColor: "transparent",
-         color: "gold"
+  const useStyles = makeStyles({
+    bottomNavigation: {
+      "& .Mui-selected": {
+        backgroundColor: "transparent",
+        color: "gold"
       }
     }
   });
   
-   const classes = useStyles(); 
-
+  const classes = useStyles(); 
   return (
     <>
-
       <Container maxWidth="xl" disableGutters>
         <Box sx={{ height: "10vh", bgcolor: "black", opacity: "0.9", display: "flex" }}>
           <div className='footer-border-box-left'>
