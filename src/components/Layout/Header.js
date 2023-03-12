@@ -39,7 +39,7 @@ function Header() {
         <Box className="header-display-flex" sx={{ height: "10vh" }} >
             <div className='header-top-left'>
               <div className='header-top-left-image'></div>
-              <div className='header-top-font'>차세대ICT융합센터</div>
+              <div className='header-top-font'>----------</div>
                 <BottomNavigation
                   className='circle'
                   showLabels
