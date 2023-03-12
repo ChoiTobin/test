@@ -45,19 +45,19 @@ function Employee() {
         <EmployeeBoxCard title={employee[3]}/>
                       {/* 생산기술부 */}
         <div>
-          빈곳
+          
         </div>
                       {/*빈곳*/}
-        <div className='EmployeeContainer2'>
+        <div className='Employee-EM-Container'>
           <EmployeeBoxMiniCard/>
 
         </div>
-        <div className='EmployeeContainer2'>
+        <div className='Employee-EM-Container'>
           <EmployeeBoxMiniCard/>
           <EmployeeBoxMiniCard/>
           <EmployeeBoxMiniCard/>
         </div>
-        <div  className='EmployeeContainer2'>
+        <div  className='Employee-EM-Container'>
             <EmployeeBoxMiniCard/>
         </div>
         

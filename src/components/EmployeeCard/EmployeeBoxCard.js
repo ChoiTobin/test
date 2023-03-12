@@ -5,7 +5,7 @@ import FaceIcon from '@mui/icons-material/Face';
 function EmplyeeBoxCard(props) {
   return (
   <>
-          <div className='job-box-CEO-container'>
+          <div className='job-box-TeamLeader-container'>
           <div className='job-box'>
             <div>
             <AssignmentIndIcon sx={{color:"black",width:"50px" ,height:"40px"}}/>
@@ -14,8 +14,8 @@ function EmplyeeBoxCard(props) {
             <div></div>
           </div>
 
-          <div className='job-box-CEO'>
-            <div className='job-CEO-flex'>
+          <div className='job-box-Card'>
+            <div className='job-Card-flex'>
                 <div>
                 <FaceIcon sx={{width:"100px" ,height:"100px"}}/>
                 </div>
