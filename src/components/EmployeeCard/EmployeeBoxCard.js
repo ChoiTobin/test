@@ -11,7 +11,6 @@ return (
       <div className='job-box-TeamLeader-container'>
             <div className='job-box' name={`${props.title.title}`}   
             //onClick={(e)=>colorHandler(e)}
-            style={{ backgroundColor:"black" }}
             >
               <div>
               </div>

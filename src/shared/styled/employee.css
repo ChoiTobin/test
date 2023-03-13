@@ -5,6 +5,7 @@
     grid-template-rows: repeat(1,1fr);
     width: 100vw;
     height: 70%;
+    
 }
 
 .job-box-TeamLeader-container{
@@ -21,8 +22,8 @@
     height: 40%;
     align-items: center;
     border:2px dotted rgb(40, 39, 39);
-    /* /* background: rgb(36,36,36); */
-    /* background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(97,97,97,0.9598214285714286) 2%, rgba(87,86,86,0.923406862745098) 98%, rgba(36,35,35,1) 100%);  */
+    background: rgb(36,36,36);
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(97,97,97,0.9598214285714286) 2%, rgba(87,86,86,0.923406862745098) 98%, rgba(36,35,35,1) 100%);
 
 }
 .job-box-Card{
@@ -78,7 +79,8 @@
     width: 93%;
     grid-gap: 5px;
     margin: 0 auto;
-    margin-top: 17%;
+    margin-top: 22%;
+
     
 }
 .job-box-employee-container{
@@ -129,3 +131,9 @@
     margin-top: 20px;
     margin-left: 10px;
 }
+/* 
+.EmployeeContainer{
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: none;
+} */

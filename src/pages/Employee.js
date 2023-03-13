@@ -72,35 +72,41 @@ function Employee() {
   return (
     <>
     <Header/>
-    <div  style={{  height: "80vh" ,display:"flex"}} >
+    <div  style={{  height: "80vh" ,display:"flex"}} className="over">
       <div className='EmployeeContainer'>
-        <EmployeeBoxCard title={employee[0]} />
-                      {/* 대표님 */}
-        <EmployeeBoxCard title={employee[1]}/>
-                      {/* 경영기획부 */}
-        <EmployeeBoxCard title={employee[2]}/>
-                      {/* 플랫폼 사업부 */}
-        <EmployeeBoxCard title={employee[3]}/>
-                      {/* 생산기술부 */}
-        <div>
-          
-        </div>
-                      {/*빈곳*/}
-        <div className='Employee-EM-Container'>
-          <EmployeeBoxMiniCard title={employee[4]}/>
+       
+            <EmployeeBoxCard title={employee[0]} />
+                          {/* 대표님 */}
+            <EmployeeBoxCard title={employee[1]}/>
+                          {/* 경영기획부 */}
+            <EmployeeBoxCard title={employee[2]}/>
+                          {/* 플랫폼 사업부 */}
+            <EmployeeBoxCard title={employee[3]}/>
+                          {/* 생산기술부 */}
 
-        </div>
-        <div className='Employee-EM-Container'>
-          <EmployeeBoxMiniCard title={employee[5]}/>
-          <EmployeeBoxMiniCard  title={employee[6]}/>
-          <EmployeeBoxMiniCard title={employee[7]}/>
-          <EmployeeBoxMiniCard title={employee[8]}/>
+            <div>
+              
+            </div>
+                          {/*빈곳*/}
+            <div className='Employee-EM-Container'>
+              <EmployeeBoxMiniCard title={employee[4]}/>
 
-        </div>
-        <div  className='Employee-EM-Container'>
-            <EmployeeBoxMiniCard title={employee[9]}/>
-        </div>
-        
+            </div>
+            <div className='Employee-EM-Container'>
+              <EmployeeBoxMiniCard title={employee[5]}/>
+              <EmployeeBoxMiniCard  title={employee[6]}/>
+              <EmployeeBoxMiniCard title={employee[7]}/>
+              <EmployeeBoxMiniCard title={employee[8]}/>
+
+            </div>
+            <div  className='Employee-EM-Container'>
+                <EmployeeBoxMiniCard title={employee[9]}/>
+            </div>
+
+
+
+
+
       </div>{/* EmployeeContainer */}
     </div>
     </>
