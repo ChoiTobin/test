@@ -7,14 +7,12 @@ function Home() {
   return (
     <>
         <Header/>
-
           <div className='box0' style={{  height: "80vh" ,display:"flex"} }>
             <HomeFontCard/>
             <div className='box3' style={{display:"flex"}}>
               <HomeBoxCard/>
             </div>
           </div>
-
     </>
   )
 }

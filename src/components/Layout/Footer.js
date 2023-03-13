@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 import '../../shared/styled/footer.css';
 
 
+
 function Footer() {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
@@ -24,9 +25,9 @@ function Footer() {
     bottomNavigation: {
       "& .Mui-selected": {
         backgroundColor: "transparent",
-        color: "gold"
+        color: "gold",
       }
-    }
+  }
   });
   
   const classes = useStyles(); 
@@ -47,19 +48,26 @@ function Footer() {
               <BottomNavigation
               className="footer-border-box-right-center"
                 classes={{ root: classes.bottomNavigation }}
+                
                 showLabels
                 value={value}
                 sx={{ bgcolor: "black" }}
                 onChange={(event, newValue) => {
                   setValue(newValue);
                 }}>
-                <BottomNavigationAction onClick={()=>{navigate('/')}} sx={{ color: "white" }} label="처음으로" icon={<HomeIcon sx={{ color: value === 0 ? "gold" : "white" }} />} />
-                <BottomNavigationAction onClick={()=>{navigate('/Employee')}} sx={{ color: "white" }} label="직원안내" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
-                <BottomNavigationAction sx={{ color: "white" }} label="청사안내" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
-                <BottomNavigationAction sx={{ color: "white" }} label="홍보콘텐츠" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
-                <BottomNavigationAction sx={{ color: "white" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
-                <BottomNavigationAction sx={{ color: "white" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
-                <BottomNavigationAction sx={{ color: "white" }} label="공지사항" icon={<BusinessCenterIcon sx={{ color: value === 6 ? "gold" : "white" }} />} />
+                <BottomNavigationAction  onClick={()=>{navigate('/')}} sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="처음으로" icon={<HomeIcon sx={{ color: value === 0 ? "gold" : "white" }} />} />
+                  
+                <BottomNavigationAction onClick={()=>{navigate('/Employee')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="직원안내" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
+
+                <BottomNavigationAction sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="청사안내" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
+
+                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="홍보콘텐츠" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
+
+                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
+
+                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
+
+                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
               </BottomNavigation>
             </Box>
           </div>

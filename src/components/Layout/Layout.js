@@ -30,7 +30,7 @@ return (
                 <Footer/>
         </Container>
 </>
-)
-}
+        )
+                }
 
 export default Layout 

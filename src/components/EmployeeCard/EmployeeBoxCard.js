@@ -1,23 +1,29 @@
 import React from 'react'
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import FaceIcon from '@mui/icons-material/Face';
+import img1 from "../../image/FACE.png";
+import { useState } from 'react';
 
 function EmplyeeBoxCard(props) {
-  return (
-  <>
-          <div className='job-box-TeamLeader-container'>
-          <div className='job-box'>
-            <div>
-            <AssignmentIndIcon sx={{color:"black",width:"50px" ,height:"40px"}}/>
-            </div>
-            <div className='font'>{props.title.title}</div>
-            <div></div>
-          </div>
+  const backgroundImg = img1
 
+
+return (
+  <>
+      <div className='job-box-TeamLeader-container'>
+            <div className='job-box' name={`${props.title.title}`}   
+            //onClick={(e)=>colorHandler(e)}
+            style={{ backgroundColor:"black" }}
+            >
+              <div>
+              </div>
+              <span  className='letter-spacing' >{props.title.title}
+              </span>
+              <div>
+              </div>
+            </div>
           <div className='job-box-Card'>
             <div className='job-Card-flex'>
                 <div>
-                <FaceIcon sx={{width:"100px" ,height:"100px"}}/>
+                  <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
                 </div>
                 <div>
                   <span className='name'>

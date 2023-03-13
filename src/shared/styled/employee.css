@@ -14,13 +14,16 @@
 }
 
 .job-box{
-    background-color: gray;
     display: flex;
     justify-content: space-around;
-    border: 1px solid brown;
+    border: 1px solid rgb(13, 13, 13);
     border-radius: 5px;
-    height: 20%;
+    height: 40%;
     align-items: center;
+    border:2px dotted rgb(40, 39, 39);
+    /* /* background: rgb(36,36,36); */
+    /* background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(97,97,97,0.9598214285714286) 2%, rgba(87,86,86,0.923406862745098) 98%, rgba(36,35,35,1) 100%);  */
+
 }
 .job-box-Card{
     margin-top: 10px;
@@ -40,11 +43,17 @@
     width: 98%;
     
 }
-.font{
+/* .font{
     width: 36.33%;
     height: 50%;
-    /* space between 대신 */
+ 
     color: white;
+    font-size: 20px;
+} */
+.letter-spacing{
+    letter-spacing: 5px;
+    color: white;
+    font-weight: 800;
     font-size: 20px;
 }
 .name{
@@ -69,7 +78,7 @@
     width: 93%;
     grid-gap: 5px;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 17%;
     
 }
 .job-box-employee-container{
@@ -83,13 +92,15 @@
     border-radius: 10px;
     background-color: white;
     height: 100%;
+    border: 1px solid orange;
+    box-sizing: border-box;
 }
 .job-EM-border{
-    border: 1px solid orange;
     border-radius: 10px;
     margin: 0 auto;
-    align-items: center;
+    /* align-items: center; */
     height: 100%;
+    display: flex;
 }
 
 .EM-name{
@@ -98,17 +109,23 @@
 }
 .EM-name2{
     font-size:10px;
-    margin: 5px;
+
 
 }
 .EM-name3{
     font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
 
 }
 .flex{
     display: flex;
 }
-.test{
-    width: 30%;
-    height: 80%;
+.img-hight{
+    width: 60px;
+    height: 70px;
+}
+.name-center{
+    margin-top: 20px;
+    margin-left: 10px;
 }
