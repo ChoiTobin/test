@@ -13,11 +13,11 @@ function EmployeeBoxMiniCard(props) {
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                          <div className='EM-name'>{props.title.name}</div>
-                          <div className='EM-name2'>{props.title.job}</div>
+                          <div className='EM-name'>ㄴ</div>
+                          <div className='EM-name2'>ㅇ</div>
                         </div>
                       </div>
-                      <div className='EM-name3'>{props.title.active}</div>
+                      <div className='EM-name3'>g</div>
                   </div>
             </div>
         </div>

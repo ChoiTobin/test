@@ -8,9 +8,9 @@ function EmplyeeBoxCard(props) {
 
 return (
   <>
+  
       <div className='job-box-TeamLeader-container'>
             <div className='job-box' name={`${props.title.title}`}   
-            //onClick={(e)=>colorHandler(e)}
             >
               <div>
               </div>

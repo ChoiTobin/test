@@ -65,16 +65,14 @@ function Employee() {
   }
 ]
 
-//state에서 객체로 불린값 설정한다. {true,false} =>onclci한 속성이랑 객체랑 일치하면 true로 속성 바꿔줘 
-//아니면 false 해서 삼항연산자 통해서 props.title.뭐가 true면 컬러 orange아니면 black
-//state로 해야할까?렌더링 시키려면 스테이트로 하자.
+
 
   return (
     <>
     <Header/>
     <div  style={{  height: "80vh" ,display:"flex"}} className="over">
       <div className='EmployeeContainer'>
-       
+    
             <EmployeeBoxCard title={employee[0]} />
                           {/* 대표님 */}
             <EmployeeBoxCard title={employee[1]}/>
@@ -83,14 +81,12 @@ function Employee() {
                           {/* 플랫폼 사업부 */}
             <EmployeeBoxCard title={employee[3]}/>
                           {/* 생산기술부 */}
-
             <div>
               
             </div>
                           {/*빈곳*/}
             <div className='Employee-EM-Container'>
               <EmployeeBoxMiniCard title={employee[4]}/>
-
             </div>
             <div className='Employee-EM-Container'>
               <EmployeeBoxMiniCard title={employee[5]}/>
@@ -102,11 +98,6 @@ function Employee() {
             <div  className='Employee-EM-Container'>
                 <EmployeeBoxMiniCard title={employee[9]}/>
             </div>
-
-
-
-
-
       </div>{/* EmployeeContainer */}
     </div>
     </>
