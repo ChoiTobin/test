@@ -36,8 +36,8 @@
     border-radius:3px;
     height: 6%;
     border: 2px dotted black;
-    background: rgb(36,36,36);
-    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(97,97,97,0.9598214285714286) 2%, rgba(87,86,86,0.923406862745098) 98%, rgba(36,35,35,1) 100%);
+
+  
     margin-bottom: 3%;
 }
 .Title-Member-box1-center{
