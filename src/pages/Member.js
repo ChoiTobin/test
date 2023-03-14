@@ -9,7 +9,9 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./../shared/styled/modal.css"
 import { useState } from 'react';
+import Green from "../image/Green.png"
 // components
+
 
 
 const style = {
@@ -26,8 +28,9 @@ const style = {
 
 
 
-function Member() {
 
+function Member() {
+    const backgroundImg2=Green
     const backgroundImg = img1
     const [open, setOpen] = React.useState(false);
     const [number,setNumber] = useState(0)
@@ -155,7 +158,11 @@ return (
                         <div className='name3'>
                             업무 총괄
                         </div>
+          
 
+                    </div>
+                    <div className="greenButton"style={{backgroundImage:`url(${backgroundImg2})`,backgroundSize:"cover"  }} >
+     
                     </div>
                 </div>
             </div>
