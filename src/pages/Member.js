@@ -5,11 +5,12 @@ import "swiper/css";
 import "../../src/shared/styled/Member.css";
 import img1 from "../image/FACE.png";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./../shared/styled/modal.css"
 import { useState } from 'react';
+// components
+
 
 const style = {
     position: "absolute",
@@ -111,24 +112,24 @@ let active = arr[number].active
 return (
     <>
     <Header/>
-<div>
-    <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        >
-        <Box sx={style}>
-            <Typography id="modal-modal-title" variant="h6" component="h2">
-                <div className='modal-img' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
-            </Typography>
-            <div className='modal-font1' id="modal-modal-description" sx={{ mt: 3 }}>
-                <h3>{name}</h3>
-                <h4>{active}</h4>
-            </div>
-        </Box>
-    </Modal>
-</div>
+    <div>
+        <Modal
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+            >
+            <Box sx={style}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                    <div className='modal-img' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
+                </Typography>
+                <div className='modal-font1' id="modal-modal-description" sx={{ mt: 3 }}>
+                    <h3>{name}</h3>
+                    <h4>{active}</h4>
+                </div>
+            </Box>
+        </Modal>
+    </div>
 
 
     <div  style={{  height: "80vh" ,display:"flex"}} className="over">
@@ -146,7 +147,7 @@ return (
                     </div>
                     <div >
                         <span className='name'>
-                            최승환
+                            최--
                         </span>
                         <span className='name2'>
                             대표
@@ -154,6 +155,7 @@ return (
                         <div className='name3'>
                             업무 총괄
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -172,7 +174,7 @@ return (
                     </div>
                     <div>
                         <span className='name'>
-                            윤상원
+                            윤--
                         </span>
                         <span className='name2'>
                             부장
@@ -192,7 +194,7 @@ return (
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김영희
+                            <div className='EM-name'>김--
                             </div>
                             <div className='EM-name2'>사원
                             </div>
@@ -220,7 +222,7 @@ return (
                 </div>
                 <div>
                     <span className='name'>
-                        임지현
+                        임--
                     </span>
                     <span className='name2'>
                         차장
@@ -240,7 +242,7 @@ return (
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>최현욱
+                            <div className='EM-name'>최--
                             </div>
                             <div className='EM-name2'>대리
                             </div>
@@ -258,7 +260,7 @@ return (
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>최유진
+                        <div className='EM-name'>최--
                         </div>
                         <div className='EM-name2'>주임
                         </div>
@@ -278,7 +280,7 @@ return (
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>신정우
+                        <div className='EM-name'>신--
                         </div>
                         <div className='EM-name2'>연구원
                         </div>
@@ -296,7 +298,7 @@ return (
                     <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                     </div>
                     <div className='name-center'>
-                    <div className='EM-name'>최토빈
+                    <div className='EM-name'>최--
                     </div>
                     <div className='EM-name2'>인턴
                     </div>
@@ -323,7 +325,7 @@ return (
                 </div>
                 <div>
                     <span className='name'>
-                        최재식
+                        최--
                     </span>
                     <span className='name2'>
                         부장
@@ -342,7 +344,7 @@ return (
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김영수
+                            <div className='EM-name'>김--
                             </div>
                             </div>
                         </div>
@@ -369,7 +371,7 @@ return (
                     </div>
                     <div>
                         <span className='name'>
-                            김미자
+                            김--
                         </span>
                         <span className='name2'>
                             부장
@@ -388,7 +390,7 @@ return (
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김동일
+                            <div className='EM-name'>김--
                             </div>
                             <div className='EM-name2'>차장
                             </div>
@@ -406,7 +408,7 @@ return (
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>박정훈
+                        <div className='EM-name'>박--
                         </div>
                         <div className='EM-name2'>대리
                         </div>
@@ -426,7 +428,7 @@ return (
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>정찬희
+                        <div className='EM-name'>정--
                         </div>
                         <div className='EM-name2'>연구원
                         </div>
