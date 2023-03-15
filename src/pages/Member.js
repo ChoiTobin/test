@@ -10,6 +10,7 @@ import Modal from "@mui/material/Modal";
 import "./../shared/styled/modal.css"
 import { useState } from 'react';
 import Green from "../image/Green.png"
+import necklace from"../image/necklace.png"
 // components
 
 
@@ -110,6 +111,7 @@ let arr = [{
 }
 ]
 const backgroundImg2=Green
+const backgroundImg3= necklace
 const backgroundImg = img1
 const [open, setOpen] = React.useState(false);
 const [number,setNumber] = useState(0)
@@ -150,20 +152,21 @@ const [open2, setOpen2] = React.useState(false);
 return (
     <>
     <Header/>
-    
+
     <Modal
     open={open2}
     onClose={handleClose}
     aria-labelledby="modal-modal-title"
     aria-describedby="modal-modal-description">
     <Box  sx={style}>
+    <div className='modal-neck' style={{backgroundImage:`url(${backgroundImg3})` ,backgroundSize: "cover" }}></div>
         <div className='modal-top-font3' onClick={()=>setOpen2(false)}> 이전</div>
         <div className='modal-top-line-dotted'>ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ </div>
         <div className='modal-container2'>
         {action}
         </div>
     </Box>
-</Modal>
+    </Modal>
 
         <Modal
             open={open}
@@ -175,7 +178,7 @@ return (
             
                 <div className='modal-top-container'>
                     <div className='modal-top-font'>좌석위치보기</div>
-                    <div></div>
+                    <div className='modal-neck' style={{backgroundImage:`url(${backgroundImg3})` ,backgroundSize: "cover" }}></div>
                     <div className='modal-top-font2'  onClick={()=>setOpen(false)}>닫기</div>
                 </div>
                 <div className='modal-top-line'>

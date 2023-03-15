@@ -157,3 +157,10 @@
     width: 250px;
     text-align: center;
 }
+.modal-neck{
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    right: 200px;
+    bottom:390px;
+}

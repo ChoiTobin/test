@@ -25,6 +25,10 @@ function Header() {
   const updateTime = useCallback(() => {
     setTime(new Date().getMinutes());
   }, []);
+    
+  if(time<10){
+   setTime("0"+time)
+  }
 
   useEffect(() => {
     const intervalId = setInterval(updateTime, 1000);
