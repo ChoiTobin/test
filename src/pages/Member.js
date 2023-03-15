@@ -14,39 +14,9 @@ import Green from "../image/Green.png"
 
 
 
-const style = {
-    position: "absolute",
-    top: "30%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 500,
-    height:300,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 2
-};
-
-
 
 
 function Member() {
-    const backgroundImg2=Green
-    const backgroundImg = img1
-    const [open, setOpen] = React.useState(false);
-    const [number,setNumber] = useState(0)
-    const [color,setColor] = useState(5)
-
-
-
-    function handleOpen (e){
-        setNumber(e)
-        setOpen(true);
-    }
-    const handleClose = () => setOpen(false);
-
-
-
-
 let arr = [{
     name:"최승환",
     active:"대표",
@@ -109,13 +79,41 @@ let arr = [{
     id:14
 }
 ]
+const backgroundImg2=Green
+const backgroundImg = img1
+const [open, setOpen] = React.useState(false);
+const [number,setNumber] = useState(0)
+
+
 let name = arr[number].name
 let active = arr[number].active
+
+const style = {
+    position: "absolute",
+    top: "30%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 500,
+    height:400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 2,
+};
+
+
+
+
+
+function handleOpen (e){
+    setNumber(e)
+    setOpen(true);
+}
+const handleClose = () => setOpen(false);
 
 return (
     <>
     <Header/>
-    <div>
+
         <Modal
             open={open}
             onClose={handleClose}
@@ -123,55 +121,83 @@ return (
             aria-describedby="modal-modal-description"
             >
             <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    <div className='modal-img' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
-                </Typography>
-                <div className='modal-font1' id="modal-modal-description" sx={{ mt: 3 }}>
-                    <h3>{name}</h3>
-                    <h4>{active}</h4>
+                <div className='modal-top-container'>
+                    <div className='modal-top-font'>좌석위치보기</div>
+                    <div></div>
+                    <div className='modal-top-font2'  onClick={()=>setOpen(false)}>닫기</div>
+                </div>
+                <div className='modal-top-line'>
+                <div className='modal-top-line-dotted'>ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ </div>
+                </div>
+                <div className='modal-container'>
+                    <div className='modal-flex'>
+                        <div className='modal-img' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>    
+                        <div className='modal-info'>
+                        <div className='modal-name-flex'>
+                            <div className='nameWeight'>김동일                        
+                            </div>
+                            <div className='nameWeight2'>
+                            차장
+                            </div>
+                        </div>
+                            <div>
+                                <span className='modal-span'>전화번호</span>
+                                <span>010-****-****</span>
+                            </div>
+                            <div>
+                                <span className='modal-span'>팩스번호</span>
+                                <span>010-****-****</span>
+                            </div>
+                            <div>
+                                <span className='modal-span'>담당업무</span>
+                                <span>홍보부</span>
+                            </div>
+                            <div className='modal-box-shadow'>담당업무 전체보기 ></div>
+                        </div>
+                    </div>
+                    <div className='modal-footer-line'>
+                        <div className='modal-footer-span'>재실</div>
+                        <div className='modal-footer-span'>부재</div>
+                    </div>    
                 </div>
             </Box>
         </Modal>
-    </div>
+
 
 
     <div  style={{  height: "80vh" ,display:"flex"}} className="over">
-    <Swiper slidesPerView={4} className="mySwiper">
-        <SwiperSlide>
-            <div className='Title-Member-box1'
-                style={color == 0 ? {backgroundColor:"gray"} :{backgroundColor:"black"}} 
-                onClick={()=>setColor(0)}>
-                <span className='Title-Member-box1-center' >대표</span>
+    <div className='oneBoxSizing'>
+        <div className='Title-Member-box0'>
+            <span className='Title-Member-box1-center' >대표</span>
             </div>
-            <div className='Member-box1-center' onClick={()=>handleOpen(0)} >
-                <div className='job-Card-flex' name="최승환">
-                    <div>
-                        <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
-                    </div>
-                    <div >
-                        <span className='name'>
-                            최--
-                        </span>
-                        <span className='name2'>
-                            대표
-                        </span>
-                        <div className='name3'>
-                            업무 총괄
-                        </div>
-          
-
-                    </div>
-                    <div className="greenButton"style={{backgroundImage:`url(${backgroundImg2})`,backgroundSize:"cover"  }} >
-     
+        <div className='Member-box1-center' onClick={()=>handleOpen(0)} >
+            <div className='job-Card-flex' name="최승환">
+                <div>
+                    <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
+                </div>
+                <div >
+                    <span className='name'>
+                        최--
+                    </span>
+                    <span className='name2'>
+                        대표
+                    </span>
+                    <div className='name3'>
+                        업무 총괄
                     </div>
                 </div>
+                <div className="greenButton"style={{backgroundImage:`url(${backgroundImg2})`,backgroundSize:"cover"  }} >
+
+                </div>
             </div>
-        </SwiperSlide>
+        </div>
+    </div>
+    <Swiper slidesPerView={3} className="mySwiper">
+
+ 
 
         <SwiperSlide>
-            <div className='Title-Member-box1'  
-                    style={color == 1 ? {backgroundColor:"gray"} :{backgroundColor:"black"}} 
-                    onClick={()=>setColor(1)}>
+            <div className='Title-Member-box1'>
                 <span className='Title-Member-box1-center'>경영기획부</span>
             </div>
             <div className='Member-box1-center ' onClick={()=>handleOpen(1)}>
@@ -217,9 +243,8 @@ return (
     </SwiperSlide>
 
     <SwiperSlide>
-        <div className='Title-Member-box1' 
-        style={color == 2 ? {backgroundColor:"gray"} :{backgroundColor:"black"}} 
-        onClick={()=>setColor(2)}>
+        <div className='Title-Member-box1'>
+
             <span className='Title-Member-box1-center'>플랫폼사업부</span>
         </div>
         <div className='Member-box1-center'  onClick={()=>handleOpen(2)}>
@@ -321,8 +346,7 @@ return (
 
     <SwiperSlide>
         <div className='Title-Member-box1' 
-        style={color == 3 ? {backgroundColor:"gray"} :{backgroundColor:"black"}} 
-        onClick={()=>setColor(3)}>
+>
             <span className='Title-Member-box1-center'>생산기술부</span>
         </div>
         <div className='Member-box1-center'  onClick={()=>handleOpen(3)}>
@@ -366,9 +390,7 @@ return (
     </SwiperSlide>
 
     <SwiperSlide>
-            <div className='Title-Member-box1'  
-            style={color == 4 ? {backgroundColor:"gray"} :{backgroundColor:"black"}} 
-            onClick={()=>setColor(4)}>
+            <div className='Title-Member-box1'>
                 <span className='Title-Member-box1-center'>홍보부</span>
             </div>
             <div className='Member-box1-center'  onClick={()=>handleOpen(10)}>

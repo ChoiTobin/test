@@ -29,6 +29,20 @@
   }
 
 /* swiper CSS */
+.Title-Member-box0{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius:3px;
+    height: 6%;
+    border: 2px dotted black;
+    background: rgb(244, 221, 13);
+    background: linear-gradient(90deg, rgb(221, 168, 9) 0%, rgba(230, 133, 6, 0.96) 2%, rgba(246, 173, 2, 0.923) 98%, rgb(225, 182, 6) 100%);
+
+
+  
+    margin-bottom: 3%;
+}
 .Title-Member-box1{
     width: 90%;
     text-align: center;
@@ -36,6 +50,9 @@
     border-radius:3px;
     height: 6%;
     border: 2px dotted black;
+    background: rgb(36,36,36);
+    background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(97,97,97,0.9598214285714286) 2%, rgba(87,86,86,0.923406862745098) 98%, rgba(36,35,35,1) 100%);
+
 
   
     margin-bottom: 3%;
@@ -135,4 +152,7 @@
     width: 20px;
     height: 20px;
 
+}
+.oneBoxSizing{
+    width: 30%;
 }

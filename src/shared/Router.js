@@ -3,12 +3,12 @@ import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Employee from '../pages/Employee';
 import Member from '../pages/Member';
-
+import Location from '../pages/Location';
 function Router() {
   return ( 
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/Employee' element={<Employee/>}/>
+            <Route path='/Location' element={<Location/>}/>
             <Route path='/Member' element={<Member/>}/>
         </Routes>
     )
