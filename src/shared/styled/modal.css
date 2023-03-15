@@ -1,7 +1,13 @@
+
+
 .modal-img{
-    width: 34%;
-    height:80%;
+    width: 33%;
+    height:70%;
     margin-top: 20px;
+    border-radius: 10%;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
 }
 .modal-top-font{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -29,9 +35,35 @@
     text-align: center;
     line-height: 30px;
 }
+.modal-top-font3{
+    color: white;
+    font-weight: 800;
+    margin-left: 10px;
+    background-color: rgb(234, 168, 14);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right:10px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+}
 .modal-container{
     margin: 0 auto;
     height: 70%;
+    width: 95%;
+    background-color: orange;
+}
+.modal-container2{
+    border-radius: 20px;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 300px;
+    font-size: 30px;
+    height: 85%;
     width: 95%;
     background-color: orange;
 }
@@ -80,7 +112,7 @@
     margin-bottom: 30px;
 }
 .modal-info{
-    width: 30%;
+
     height: 90%;
     line-height: 35px;
     margin-top: 20px;
@@ -93,6 +125,14 @@
     color: white;
     font-weight: 800;
     margin-right: 4px;
+    
+    
+}
+.modal-span2{
+    font-weight: 800;
+
+
+
     
 }
 .nameWeight{

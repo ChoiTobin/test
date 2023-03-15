@@ -20,62 +20,92 @@ function Member() {
 let arr = [{
     name:"최승환",
     active:"대표",
+    number:"010-1234-4567",
+    action:"업무 총괄",
     id:0
 },{
     name:"윤상원",
     active:"부장",
+    number:"010-1234-4567",
+    action:"경영기획부 업무 총괄",
     id:1
 },{
     name:"임지현",
     active:"차장",
+    number:"010-1234-4567",
+    action:"플랫폼사업부 업무 총괄",
     id:2
 },{
     name:"최재식",
     active:"부장",
+    number:"010-1234-4567",
+    action:"생산기술부 업무 총괄",
     id:3
 },{
     name:"김미자",
     active:"부장",
+    number:"010-1234-4567",
+    action:"홍보담당",
     id:4
 },{
     name:"최현욱",
     active:"대리",
+    number:"010-1234-4567",
+    action:"소프트웨어 개발/유지관리",
     id:5
 },{
     name:"최유진",
     active:"주임",
+    number:"010-1234-4567",
+    action:"제품 디자인 콘텐츠 담당",
     id:6
 },{
     name:"신정우",
     active:"연구원",
+    number:"010-1234-4567",
+    action:"소프트웨어 개발/유지관리",
     id:7
 },{
     name:"최토빈",
     active:"인턴",
+    number:"010-1234-4567",
+    action:"소프트웨어 개발/유지관리",
     id:8
 },{
     name:"김영수",
     active:"",
+    number:"010-1234-4567",
+    action:"생산기술부 업무 보조",
     id:9
 },{
     name:"김미자",
     active:"부장",
+    number:"010-1234-4567",
+    action:"홍보담당",
     id:10
 },{
     name:"김동일",
     active:"차장",
+    number:"010-1234-4567",
+    action:"홍보담당",
     id:11
 },{
     name:"박정훈",
     active:"대리",
+    number:"010-1234-4567",
+    action:"홍보담당",
     id:12
 },{
     name:"정찬희",
     active:"연구원",
+    number:"010-1234-4567",
+    action:"홍보 담당",
     id:13
 },{
     name:"김영희",
     active:"사원",
+    number:"010-1234-4567",
+    action:"홍보 담당",
     id:14
 }
 ]
@@ -85,8 +115,6 @@ const [open, setOpen] = React.useState(false);
 const [number,setNumber] = useState(0)
 
 
-let name = arr[number].name
-let active = arr[number].active
 
 const style = {
     position: "absolute",
@@ -108,11 +136,34 @@ function handleOpen (e){
     setNumber(e)
     setOpen(true);
 }
+
+let name = arr[number].name
+let active = arr[number].active
+let action = arr[number].action
+
 const handleClose = () => setOpen(false);
+
+// 미니모달
+const [open2, setOpen2] = React.useState(false);
+
 
 return (
     <>
     <Header/>
+    
+    <Modal
+    open={open2}
+    onClose={handleClose}
+    aria-labelledby="modal-modal-title"
+    aria-describedby="modal-modal-description">
+    <Box  sx={style}>
+        <div className='modal-top-font3' onClick={()=>setOpen2(false)}> 이전</div>
+        <div className='modal-top-line-dotted'>ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ </div>
+        <div className='modal-container2'>
+        {action}
+        </div>
+    </Box>
+</Modal>
 
         <Modal
             open={open}
@@ -120,7 +171,8 @@ return (
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             >
-            <Box sx={style}>
+            <Box  sx={style} >
+            
                 <div className='modal-top-container'>
                     <div className='modal-top-font'>좌석위치보기</div>
                     <div></div>
@@ -134,10 +186,10 @@ return (
                         <div className='modal-img' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>    
                         <div className='modal-info'>
                         <div className='modal-name-flex'>
-                            <div className='nameWeight'>김동일                        
+                            <div className='nameWeight'>{name}                        
                             </div>
                             <div className='nameWeight2'>
-                            차장
+                            {active}
                             </div>
                         </div>
                             <div>
@@ -150,9 +202,9 @@ return (
                             </div>
                             <div>
                                 <span className='modal-span'>담당업무</span>
-                                <span>홍보부</span>
+                                <span className='modal-span2'>{action}</span>
                             </div>
-                            <div className='modal-box-shadow'>담당업무 전체보기 ></div>
+                            <div className='modal-box-shadow' onClick={()=>setOpen2(true)}>담당업무 전체보기 ></div>
                         </div>
                     </div>
                     <div className='modal-footer-line'>
@@ -162,6 +214,8 @@ return (
                 </div>
             </Box>
         </Modal>
+
+
 
 
 
@@ -186,9 +240,7 @@ return (
                         업무 총괄
                     </div>
                 </div>
-                <div className="greenButton"style={{backgroundImage:`url(${backgroundImg2})`,backgroundSize:"cover"  }} >
 
-                </div>
             </div>
         </div>
     </div>
