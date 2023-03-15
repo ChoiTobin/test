@@ -26,9 +26,7 @@ function Header() {
     setTime(new Date().getMinutes());
   }, []);
     
-  if(time<10){
-   setTime("0"+time)
-  }
+
 
   useEffect(() => {
     const intervalId = setInterval(updateTime, 1000);
@@ -43,18 +41,22 @@ function Header() {
         <Box className="header-display-flex" sx={{ height: "10vh" }} >
             <div className='header-top-left'>
               <div className='header-top-left-image'></div>
-              <div className='header-top-font'>----------</div>
+              <div className='header-top-font'>차세대ICT융합센터</div>
                 <BottomNavigation
                   className='circle'
                   showLabels
-                  sx={{ bgcolor: "rgb(178, 115, 33)" }}
+                  sx={{ bgcolor: "rgb(178, 115, 33)"}}
                   >
-                <BottomNavigationAction sx={{color:"white"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
+                <BottomNavigationAction sx={{color:"white",fontSize:"10px"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
                 </BottomNavigation>
             </div>
             <div className='header-top-right'>
-              <AccessTimeIcon className="header-top-right-clock"></AccessTimeIcon>
-              {sum}
+              <div className="header-top-right-time">  
+                <AccessTimeIcon  className="header-top-right-clock"></AccessTimeIcon>
+              </div>
+              <div>
+              <span>{sum}</span>
+              </div>
             </div>
         </Box>
     </Container>

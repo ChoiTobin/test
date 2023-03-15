@@ -95,15 +95,31 @@
 .job-Card-flex{
     display: flex;
     border: 1px solid orange;
-    border-radius: 10px;
+    border-radius: 3px;
     margin: 0 auto;
     align-items: center;
-    height: 96%;
-    width: 98%;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
 
-    
-    
-    
+.green{
+    width: 20px;
+    height:20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.green2-top{
+    position: relative;
+}
+
+.green2{
+    width: 20px;
+    height:20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .EM-name{
@@ -146,6 +162,7 @@
 }
 .Member-container{
     display: flex;
+    justify-content: space-around;
     
 }
 .greenButton{

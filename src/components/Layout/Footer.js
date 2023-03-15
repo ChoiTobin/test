@@ -63,7 +63,7 @@ function Footer() {
 
                 <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="홍보콘텐츠" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
+                <BottomNavigationAction  sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
 
                 <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
 

@@ -5,7 +5,6 @@ import "swiper/css";
 import "../../src/shared/styled/Member.css";
 import img1 from "../image/FACE.png";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./../shared/styled/modal.css"
 import { useState } from 'react';
@@ -125,8 +124,8 @@ const style = {
     transform: "translate(-50%, -50%)",
     width: 500,
     height:400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
+    bgcolor: "rgba( 255, 255, 255, 0.8 )",
+    borderRadius:"10px",
     boxShadow: 2,
 };
 
@@ -234,7 +233,7 @@ return (
                 </div>
                 <div >
                     <span className='name'>
-                        최--
+                        최승환
                     </span>
                     <span className='name2'>
                         대표
@@ -243,7 +242,8 @@ return (
                         업무 총괄
                     </div>
                 </div>
-
+                <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green">
+                </div>
             </div>
         </div>
     </div>
@@ -262,13 +262,15 @@ return (
                     </div>
                     <div>
                         <span className='name'>
-                            윤--
+                            윤상원
                         </span>
                         <span className='name2'>
                             부장
                         </span>
                         <div className='name3'>
                             경영기획부 업무 총괄
+                        </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green">
                         </div>
                     </div>
                 </div>
@@ -277,18 +279,20 @@ return (
         <div className='Member-container'>
             <div className='job-box-employee-container'>
                 <div className='job-EM-box'>
-                    <div>
+                    <div className='green2-top'>
                         <div  className='job-EM-border'  onClick={()=>handleOpen(14)}>
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김--
+                            <div className='EM-name'>김영희
                             </div>
                             <div className='EM-name2'>사원
                             </div>
                             </div>
                         </div>
                         <div className='EM-name3'>경영기획부 업무
+                        </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                         </div>
                     </div>
                 </div>
@@ -309,13 +313,15 @@ return (
                 </div>
                 <div>
                     <span className='name'>
-                        임--
+                        임지현
                     </span>
                     <span className='name2'>
                         차장
                     </span>
                     <div className='name3'>
                             플랫폼사업부 업무 총괄
+                    </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green">
                     </div>
                 </div>
             </div>
@@ -324,36 +330,40 @@ return (
         <div className='Member-container'>
             <div className='job-box-employee-container'>
                 <div className='job-EM-box'>
-                    <div>
+                    <div className='green2-top'>
                         <div  className='job-EM-border'  onClick={()=>handleOpen(5)}>
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>최--
-                            </div>
-                            <div className='EM-name2'>대리
-                            </div>
+                                <div className='EM-name'>최현욱
+                                </div>
+                                <div className='EM-name2'>대리
+                                </div>
                             </div>
                         </div>
                         <div className='EM-name3'>소프트웨어 개발/유지관리
+                        </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                         </div>
                     </div>
                 </div>
             </div>
             <div className='job-box-employee-container'>
             <div className='job-EM-box'>
-                <div>
+                <div className='green2-top'>
                     <div  className='job-EM-border'  onClick={()=>handleOpen(6)}>
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>최--
+                        <div className='EM-name'>최유진
                         </div>
                         <div className='EM-name2'>주임
                         </div>
                         </div>
                     </div>
                     <div className='EM-name3'>제품 디자인 콘텐츠 담당
+                    </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                     </div>
                 </div>
             </div>
@@ -362,12 +372,12 @@ return (
     <div className='Member-container'>
         <div className='job-box-employee-container'>
             <div className='job-EM-box'>
-                <div>
+                <div className='green2-top' >
                     <div  className='job-EM-border'  onClick={()=>handleOpen(7)}>
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>신--
+                        <div className='EM-name'>신정우
                         </div>
                         <div className='EM-name2'>연구원
                         </div>
@@ -375,23 +385,27 @@ return (
                     </div>
                     <div className='EM-name3'>소프트웨어 개발/유지관리
                     </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
+                    </div>
                 </div>
             </div>
         </div>
     <div className='job-box-employee-container'>
         <div className='job-EM-box'>
-            <div>
+            <div className='green2-top'>
                 <div  className='job-EM-border'  onClick={()=>handleOpen(8)}>
                     <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                     </div>
                     <div className='name-center'>
-                    <div className='EM-name'>최--
+                    <div className='EM-name'>최토빈
                     </div>
                     <div className='EM-name2'>인턴
                     </div>
                     </div>
                 </div>
                 <div className='EM-name3'>소프트웨어 개발/유지관리
+                </div>
+                <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                 </div>
             </div>
         </div>
@@ -406,12 +420,12 @@ return (
         </div>
         <div className='Member-box1-center'  onClick={()=>handleOpen(3)}>
             <div className='job-Card-flex'>
-                <div>
+                <div >
                     <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}></div>
                 </div>
                 <div>
                     <span className='name'>
-                        최--
+                        최재식
                     </span>
                     <span className='name2'>
                         부장
@@ -419,22 +433,26 @@ return (
                     <div className='name3'>
                             생산기술부 업무 총괄
                     </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green">
+                    </div>
                 </div>
             </div>
         </div>
         <div className='Member-container'>
             <div className='job-box-employee-container'>
                 <div className='job-EM-box'>
-                    <div>
+                    <div className='green2-top'>
                         <div  className='job-EM-border'  onClick={()=>handleOpen(9)}>
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김--
+                            <div className='EM-name'>김영수
                             </div>
                             </div>
                         </div>
                         <div className='EM-name3'>생산기술부 업무 보조
+                        </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                         </div>
                     </div>
                 </div>
@@ -455,7 +473,7 @@ return (
                     </div>
                     <div>
                         <span className='name'>
-                            김--
+                            김미자
                         </span>
                         <span className='name2'>
                             부장
@@ -463,18 +481,20 @@ return (
                         <div className='name3'>
                                 홍보담당
                         </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green">
+                        </div>
                     </div>
                 </div>
             </div>
             <div className='Member-container'>
             <div className='job-box-employee-container'>
                 <div className='job-EM-box'>
-                    <div>
+                    <div className='green2-top'>
                         <div  className='job-EM-border' onClick={()=>handleOpen(11)}>
                             <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                             </div>
                             <div className='name-center'>
-                            <div className='EM-name'>김--
+                            <div className='EM-name'>김동일
                             </div>
                             <div className='EM-name2'>차장
                             </div>
@@ -482,23 +502,27 @@ return (
                         </div>
                         <div className='EM-name3'>홍보담당
                         </div>
+                        <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
+                        </div>
                     </div>
                 </div>
             </div>
         <div className='job-box-employee-container'>
             <div className='job-EM-box'>
-                <div>
+                <div  className='green2-top'>
                     <div  className='job-EM-border' onClick={()=>handleOpen(12)}>
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>박--
+                        <div className='EM-name'>박정훈
                         </div>
                         <div className='EM-name2'>대리
                         </div>
                         </div>
                     </div>
                     <div className='EM-name3'>홍보담당
+                    </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                     </div>
                 </div>
             </div>
@@ -507,18 +531,20 @@ return (
         <div className='Member-container'>
         <div className='job-box-employee-container'>
             <div className='job-EM-box'>
-                <div>
+                <div  className='green2-top'>
                     <div  className='job-EM-border' onClick={()=>handleOpen(13)}>
                         <div className='img-hight' style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
                         </div>
                         <div className='name-center'>
-                        <div className='EM-name'>정--
+                        <div className='EM-name'>정찬희
                         </div>
                         <div className='EM-name2'>연구원
                         </div>
                         </div>
                     </div>
                     <div className='EM-name3'>홍보담당
+                    </div>
+                    <div style={{backgroundImage:`url(${backgroundImg2})` ,backgroundSize: "cover" }} className="green2">
                     </div>
                 </div>
             </div>
