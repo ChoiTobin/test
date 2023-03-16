@@ -17,6 +17,7 @@ import '../../shared/styled/footer.css';
 
 
 
+
 function Footer() {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
@@ -65,9 +66,9 @@ function Footer() {
 
                 <BottomNavigationAction  sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
+                <BottomNavigationAction  onClick={()=>{navigate('/Notice')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/TeamInfo')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="부서소개" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
               </BottomNavigation>
             </Box>
           </div>
