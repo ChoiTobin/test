@@ -206,7 +206,7 @@ return (
                                 <span className='modal-span'>담당업무</span>
                                 <span className='modal-span2'>{action}</span>
                             </div>
-                            <div className='modal-box-shadow' onClick={()=>setOpen2(true)}>담당업무 전체보기 ></div>
+                            <div className='modal-box-shadow' onClick={()=>setOpen2(true)}>담당업무 전체보기 </div>
                         </div>
                     </div>
                     <div className='modal-footer-line'>

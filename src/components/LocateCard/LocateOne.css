@@ -1,0 +1,40 @@
+.LocateOne-border{
+    color:rgb(159, 159, 76);
+    font-size: 17px;
+    border-bottom: 2px solid white;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 800;
+}
+.LocateOne-border-baby{
+    font-size: 20px;
+}
+.LocateOne-min-border{
+cursor: pointer;
+display: flex;
+color: white;
+border-bottom: 1px solid white;
+font-weight: 800;
+font-size: 14px;
+line-height: 40px;
+justify-content: space-between;
+}
+.LocateOne-font1{
+    color: rgb(175, 167, 19);
+    font-size: 30px;
+}
+.LocateOne-font2{
+    color: white;
+    font-weight: 800;
+}
+
+.d-block{
+    margin-top: 20px;
+    border-radius: 10px;
+    height:45vh;
+    margin: 0 auto;
+    width:80%;
+}
+.carousel-control-prev{
+    opacity:none;
+}
