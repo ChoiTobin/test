@@ -2,35 +2,75 @@ import React, { useState } from 'react';
 import "../LocateCard/LocateOne.css"
 import Carousel from 'react-bootstrap/Carousel';
 import img1 from "../../image/HOME.png";
+import img2 from "../../image/HOME2.png";
+import img3 from "../../image/HOME3.png";
+import img4 from "../../image/HOME4.png";
+import img5 from "../../image/HOME5.png";
+import ImageSlider from "./ImageSlider";
 
 function LocateOne(){
-    let img = img1
+
 
     let arrDate = [
         {
         name:"1층",
-        img:img
+        img:img1,
+        id:0
+
     },{
-        name:"2층"
-        ,
-        img:img
+        name:"2층",
+        img:img2,
+        id:1
     },{
         name:"3층",
-        img:img
+        img:img3,
+        id:2
     },{
         name:"4층",
-        img:img
+        img:img4,
+        id:3
         
     },{
         name:"2층 2",
-        img:img
+        img:img5,
+        id:4
         
     },{
         name:"2층 1",
-        img:img
+        img:img1,
+        id:5
         
     }
 ]
+
+const containerStyles ={
+    width:"53vw",
+    height:"500px",
+    margin:"0 auto"
+
+}
+let [DotChange,setDotChange] = useState(0)
+const goToSlide = (slideIndex) => {
+    setDotChange(slideIndex)
+
+
+}
+
+
+const dotsContainerStyles = {
+    display:"flex",
+    justifyContent:"center",
+    color:"white"
+}
+
+const dotStyles ={
+    margin: "0 3px",
+    cursor:"pointer",
+    fontSize:"20px",
+}
+
+
+
 
     return(
         <>
@@ -48,7 +88,10 @@ function LocateOne(){
                     {arrDate.map((item,i)=>(
                         <div key={i} className="LocateOne-min-border">
                             <span>{item.name}</span>
-                            <span>></span>
+                            <div style={dotsContainerStyles}>
+
+                            <div style={dotStyles} onClick={() => goToSlide(item.id)}>0</div>
+                        </div>
                         </div>
                     ))
                         
@@ -57,24 +100,13 @@ function LocateOne(){
                 </div>
                 <div className="Locate-box-right">
                     <div className="Locate-box-right-baby">
-                        <div className="LocateOne-font1"><span>1층</span></div>
-                        <div className="LocateOne-font2">민원 여권과,당직실,부동산정보과,로비</div>
+                        
+                    <div>
+                    <div style={containerStyles}>
+                        <ImageSlider DotChange={DotChange} setDotChange={setDotChange} slideIndex slides={arrDate}/>
+                    </div>
+                </div>
 
-                <Carousel>
-                {
-                arrDate.map((item,i)=>(
-                    <Carousel.Item key={i}>
-                    <div
-
-                    className="d-block"
-                    style={{backgroundImage:`url(${item.img})` ,backgroundSize: "contain" }}
-                    />
-                    <Carousel.Caption>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                ))
-                }
-                </Carousel>
                         </div>
                     </div>
                     
