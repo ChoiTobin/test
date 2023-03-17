@@ -6,6 +6,7 @@ import Locate from '../pages/Locate';
 import TeamInfo from "../pages/TeamInfo"
 import Notice from '../pages/Notice';
 import Gallery from '../pages/Gallery';
+import Promote from '../pages/Promote';
 function Router() {
   return ( 
         <Routes>
@@ -15,6 +16,7 @@ function Router() {
             <Route path='/TeamInfo' element={<TeamInfo/>}/>
             <Route path='/Notice' element={<Notice/>}/>
             <Route path='/gallery' element={<Gallery/>}/>
+            <Route path='/Promote' element={<Promote/>}/>
         </Routes>
     )
 }
