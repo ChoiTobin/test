@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Marquee from "react-fast-marquee";
@@ -14,14 +14,16 @@ import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import { useNavigate } from 'react-router-dom'
 import '../../shared/styled/footer.css';
-
+import { useLocation } from 'react-router-dom';
 
 
 
 function Footer() {
+  const location = useLocation();
+
+
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
-  
   const useStyles = makeStyles({
     bottomNavigation: {
       "& .Mui-selected": {
@@ -32,6 +34,33 @@ function Footer() {
   });
   
   const classes = useStyles(); 
+
+  useEffect(() => {
+    switch (location.pathname){
+      case '/':
+        setValue(0);
+        break;
+      case '/Member':
+        setValue(1);
+        break;
+      case '/Locate':
+        setValue(2);
+        break;
+      case '/Promote':
+        setValue(3)
+        break;
+      case '/Gallery':
+        setValue(4)
+        break;
+      case '/Notice':
+        setValue(5)
+        break;
+      case '/TeamInfo':
+        setValue(6)
+        break; 
+    }
+  }, [ location ])
+  //홈화면에서 넘어갔을때 푸터 바뀌어야해서
   return (
     <>
       <Container maxWidth="xl" disableGutters>

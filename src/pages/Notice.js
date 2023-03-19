@@ -6,7 +6,7 @@ import { useRef, useEffect, useState } from "react";
 function Notice() {
   return (
     <>
-      <Header />
+      <Header str="공지사항"/>
       <div className="box0" style={{ height: "80vh" }}>
         <div className="Notice-container">
           <div className="Notice-box1">

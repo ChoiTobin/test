@@ -2,7 +2,7 @@ import Header from "../components/Layout/Header";
 function Promote() {
   return (
     <>
-      <Header />
+      <Header str="홍보콘텐츠" />
       <div className="box0" style={{ height: "80vh" }}>
         <iframe
           width="300"

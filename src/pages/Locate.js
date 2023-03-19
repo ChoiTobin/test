@@ -11,9 +11,10 @@ function Locate() {
     setLocateChange(!locateChange);
   }
 
+
   return (
     <>
-      <Header />
+      <Header str="청사안내"/>
       <div className="box0" style={{ height: "80vh", display: "flex" }}>
         <div className="Locate-container">
           <div className="Locate-box">

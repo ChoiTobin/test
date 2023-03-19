@@ -4,35 +4,26 @@
 }
 
 .header-top-left{
-    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0 50px 50px 0;;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 5px;
-    font-size: 30px;
-    height: 60%;
+    font-size: 50px;
+    height: 70%;
     display: flex;
+
 }
 .header-top-left-image{
         background-image: url('../../image/pngwing.png');
         background-size : contain;
-        width: 30px;
-        height: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
+        width: 50px;
+        height: 50px;
+
 }
 .header-top-font{
     color: gold;
-
-}
-.circle{
-    width: 55px;
-    height: 55px;
-    margin-right: 10px;
+    font-family: 'Nanum Brush Script';
     margin-left: 10px;
-    border-radius: 50%;
-    
 }
+
 
 
 .header-top-center{
@@ -54,18 +45,15 @@
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50px 0 0 50px;
     text-align: center;
-    margin-top: 15px;
-    font-size: 20px;
-    height:34%;
-    width: 18%;
+    margin-top: 20px;
+    font-size: 26px;
+    height:40%;
     padding-left: 10px;
-    font-weight: 600;
     color: white;
     display: flex;
-    padding: 10px;
 
 }
 .header-top-right-time{
-    margin-right: 4px;
-    margin-top: 2px;
+    margin-right: 3px;
+    margin-top: 7px;
 }

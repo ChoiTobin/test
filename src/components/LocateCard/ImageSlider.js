@@ -44,22 +44,26 @@ const ImageSlider = ({ slides, DotChange, setDotChange, slideIndex }) => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+    setDotChange(newIndex)
   };
 
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
+    setDotChange(newIndex)
   };
 
   useEffect(() => {
     setCurrentIndex(DotChange);
+    
   }, [DotChange]);
 
+  console.log(slides)
   return (
     <div style={sliderStyles}>
       <div className="LocateOne-font1">
-        <span>{currentIndex + 1}층</span>
+        <span>{slides[currentIndex].name}</span>
       </div>
       <div className="LocateOne-font2">
         민원 여권과,당직실,부동산정보과,로비

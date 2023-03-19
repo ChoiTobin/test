@@ -1,18 +1,16 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import '../../shared/styled/header.css';
-import HomeIcon from '@mui/icons-material/Home';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import BottomNavigation from '@mui/material/BottomNavigation';
+
 import React, { useState, useCallback, useEffect } from "react";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 
-function Header() {
+function Header(props) {
   //useCallback사용해서 시간 타임 
   let date = new Date();
   let dateYear = date.getFullYear();
-  let dateMonth = date.getMonth() + 1; 
+  let dateMonth = (date.getMonth() + 1); 
   let dateday = date.getDate();
   let datemonth = date.getDay();
   let dateHours = date.getHours();
@@ -20,12 +18,13 @@ function Header() {
   let result = arr[datemonth];
   let ampm = dateHours <12 ? "AM" : "PM"
 
-  const [time, setTime] = useState(date.getMinutes());
+
+  const [time, setTime] = useState(String(date.getMinutes()).padStart(2,"0"));
 
   const updateTime = useCallback(() => {
-    setTime(new Date().getMinutes());
+    setTime(String(date.getMinutes()).padStart(2,"0"));
   }, []);
-    
+  
 
 
   useEffect(() => {
@@ -41,14 +40,8 @@ function Header() {
         <Box className="header-display-flex" sx={{ height: "10vh" }} >
             <div className='header-top-left'>
               <div className='header-top-left-image'></div>
-              <div className='header-top-font'>차세대ICT융합센터</div>
-                <BottomNavigation
-                  className='circle'
-                  showLabels
-                  sx={{ bgcolor: "rgb(178, 115, 33)"}}
-                  >
-                <BottomNavigationAction sx={{color:"white",fontSize:"10px"}} value="처음으로"  label="처음으로" icon={<HomeIcon sx={{color:"white"}} />} />
-                </BottomNavigation>
+              <div className='header-top-font'>{props.str ||  props.str}</div>
+
             </div>
             <div className='header-top-right'>
               <div className="header-top-right-time">  

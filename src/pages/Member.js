@@ -160,7 +160,7 @@ function Member() {
 
   return (
     <>
-      <Header />
+      <Header str="차세대ICT융합센터" />
 
       <div style={{ height: "80vh", display: "flex" }} className="over">
         <div className="oneBoxSizing">

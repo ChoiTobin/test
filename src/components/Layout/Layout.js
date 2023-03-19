@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom';
 function Layout({children}) {
 const backgroundArr = [img1,img2,img3,img4,img5]
 const getRandomIndex = useCallback(() => {
-        return Math.floor(Math.random() * backgroundArr.length);
+return Math.floor(Math.random() * backgroundArr.length);
 }, [backgroundArr]);
 const randomIndex = getRandomIndex();
 const backgroundImg = backgroundArr[randomIndex]
@@ -20,6 +20,7 @@ const location = useLocation();
 useEffect(() => {
 
 }, [ location ])
+
 
 return (
 <>

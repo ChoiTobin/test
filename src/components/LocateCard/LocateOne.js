@@ -11,34 +11,39 @@ import ImageSlider from "./ImageSlider";
 function LocateOne() {
   let arrDate = [
     {
+        name:"종합안내",
+        img:img2,
+        id:0   
+       },
+    {
       name: "1층",
       img: img1,
-      id: 0,
+      id: 1,
     },
     {
       name: "2층",
       img: img2,
-      id: 1,
+      id: 2,
     },
     {
       name: "3층",
       img: img3,
-      id: 2,
+      id: 3,
     },
     {
       name: "4층",
       img: img4,
-      id: 3,
+      id: 4,
     },
     {
       name: "2층 2",
       img: img5,
-      id: 4,
+      id: 5,
     },
     {
       name: "2층 1",
       img: img1,
-      id: 5,
+      id: 6,
     },
   ];
 
@@ -48,8 +53,10 @@ function LocateOne() {
     margin: "0 auto",
   };
   let [DotChange, setDotChange] = useState(0);
+
   const goToSlide = (slideIndex) => {
     setDotChange(slideIndex);
+
   };
 
   const dotsContainerStyles = {
@@ -73,16 +80,12 @@ function LocateOne() {
               <span className="LocateOne-border-baby">본관 </span>
               <span className="LocateOne-border-baby2">층별안내</span>
             </div>
-            <div className="LocateOne-min-border">
-              <span>종합안내</span>
-              <span> ></span>
-            </div>
             {arrDate.map((item, i) => (
-              <div key={i} className="LocateOne-min-border">
-                <span>{item.name}</span>
+              <div onClick={() => goToSlide(item.id)} key={i} className="LocateOne-min-border">
+                <span style={DotChange == item.id ? {color:"gold"}:{color:"white"}}>{item.name}</span>
                 <div style={dotsContainerStyles}>
-                  <div style={dotStyles} onClick={() => goToSlide(item.id)}>
-                    0
+                  <div style={dotStyles} >
+                    
                   </div>
                 </div>
               </div>
