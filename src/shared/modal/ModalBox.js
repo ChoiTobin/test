@@ -4,9 +4,7 @@ import Modal from "@mui/material/Modal";
 import img1 from "../../image/FACE.png";
 import necklace from "../../image/necklace.png";
 
-function ModalBox({handleClose,setOpen,setModalInfo,ModalInfo,open}) {
-
-
+function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
   const style = {
     position: "absolute",
     top: "30%",
@@ -18,8 +16,6 @@ function ModalBox({handleClose,setOpen,setModalInfo,ModalInfo,open}) {
     borderRadius: "10px",
     boxShadow: 2,
   };
-
-
 
   // 미니모달
   const [open2, setOpen2] = React.useState(false);
@@ -50,9 +46,7 @@ function ModalBox({handleClose,setOpen,setModalInfo,ModalInfo,open}) {
             ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ{" "}
           </div>
           <div className="modal-container2">
-          {
-                    ModalInfo && ModalInfo.action
-                  }
+            {ModalInfo && ModalInfo.action}
           </div>
         </Box>
       </Modal>
@@ -93,13 +87,12 @@ function ModalBox({handleClose,setOpen,setModalInfo,ModalInfo,open}) {
               ></div>
               <div className="modal-info">
                 <div className="modal-name-flex">
-                  <div className="nameWeight"> {
-                    ModalInfo && ModalInfo.name
-                  }</div>
+                  <div className="nameWeight">
+                    {" "}
+                    {ModalInfo && ModalInfo.name}
+                  </div>
                   <div className="nameWeight2">
-                  {
-                    ModalInfo && ModalInfo.active
-                  }
+                    {ModalInfo && ModalInfo.active}
                   </div>
                 </div>
                 <div>
@@ -113,9 +106,7 @@ function ModalBox({handleClose,setOpen,setModalInfo,ModalInfo,open}) {
                 <div>
                   <span className="modal-span">담당업무</span>
                   <span className="modal-span2">
-                    {
-                    ModalInfo && ModalInfo.action
-                  }
+                    {ModalInfo && ModalInfo.action}
                   </span>
                 </div>
                 <div

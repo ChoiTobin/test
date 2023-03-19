@@ -16,16 +16,16 @@ import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
 import ModalBox from "../shared/modal/ModalBox";
 function Member() {
-    let arr0 = [
-        {
-          name: "최승환",
-          active: "대표",
-          number: "010-1234-4567",
-          action: "업무 총괄",
-          id: 1,
-          Team: "대표",
-        }
-      ];
+  let arr0 = [
+    {
+      name: "최승환",
+      active: "대표",
+      number: "010-1234-4567",
+      action: "업무 총괄",
+      id: 1,
+      Team: "대표",
+    },
+  ];
   let arr1 = [
     {
       name: "윤상원",
@@ -167,11 +167,14 @@ function Member() {
           <div className="Title-Member-box0">
             <span className="Title-Member-box1-center">대표</span>
           </div>
-          <div className="Member-box1-center" onClick={() => handleOpen(arr0[0])}>
+          <div
+            className="Member-box1-center"
+            onClick={() => handleOpen(arr0[0])}
+          >
             <div className="job-Card-flex" name="최승환">
               <div>
                 <div
-                  className="img-hight"
+                  className="img-hight2"
                   style={{
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundSize: "cover",
@@ -193,8 +196,15 @@ function Member() {
             </div>
           </div>
         </div>
-        <ModalBox setModalInfo={setModalInfo} ModalInfo={ModalInfo}setOpen2={setOpen2} open2={open2} open={open} setOpen={setOpen}  />
-                
+        <ModalBox
+          setModalInfo={setModalInfo}
+          ModalInfo={ModalInfo}
+          setOpen2={setOpen2}
+          open2={open2}
+          open={open}
+          setOpen={setOpen}
+        />
+
         <Swiper slidesPerView={3} className="mySwiper">
           <SwiperSlide>
             <MemberCard Team={arr1} />

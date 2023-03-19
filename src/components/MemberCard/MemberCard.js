@@ -19,19 +19,22 @@ function MemberCard({ Team }) {
 
   return (
     <>
-      <ModalBox handleClose={handleClose}ModalInfo={ModalInfo} setModalInfo={setModalInfo} setOpen={setOpen} open={open}></ModalBox>
-      
+      <ModalBox
+        handleClose={handleClose}
+        ModalInfo={ModalInfo}
+        setModalInfo={setModalInfo}
+        setOpen={setOpen}
+        open={open}
+      ></ModalBox>
+
       <div className="Title-Member-box1">
         <span className="Title-Member-box1-center">{Team[0].Team}</span>
       </div>
-      <div
-        className="Member-box1-center "
-        onClick={() => handleOpen(Team[0])}
-      >
+      <div className="Member-box1-center " onClick={() => handleOpen(Team[0])}>
         <div className="job-Card-flex">
           <div>
             <div
-              className="img-hight"
+              className="img-hight2"
               style={{
                 backgroundImage: `url(${backgroundImg})`,
                 backgroundSize: "cover",
@@ -58,10 +61,9 @@ function MemberCard({ Team }) {
           <div className="job-box-employee-container">
             <div className="job-EM-box">
               <div className="green2-top">
-                <div
-                  className="job-EM-border"
-                    onClick={() => handleOpen(item)}
-                >
+
+               <div> 
+                <div className="job-EM-border" onClick={() => handleOpen(item)}>
                   <div
                     className="img-hight"
                     style={{
@@ -75,6 +77,9 @@ function MemberCard({ Team }) {
                   </div>
                 </div>
                 <div className="EM-name3">{item.action}</div>
+
+                </div>
+
                 <div
                   style={{
                     backgroundImage: `url(${backgroundImg2})`,
@@ -85,7 +90,6 @@ function MemberCard({ Team }) {
               </div>
             </div>
           </div>
-          <div className="job-box-employee-container"></div>
         </div>
       ))}
     </>
