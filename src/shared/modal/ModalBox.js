@@ -46,7 +46,7 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
             ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ ㅡ{" "}
           </div>
           <div className="modal-container2">
-            {ModalInfo && ModalInfo.action}
+          {ModalInfo && ModalInfo?.adi_info7}
           </div>
         </Box>
       </Modal>
@@ -89,10 +89,10 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
                 <div className="modal-name-flex">
                   <div className="nameWeight">
                     {" "}
-                    {ModalInfo && ModalInfo.name}
+                    {ModalInfo && ModalInfo?.usr_nm}
                   </div>
                   <div className="nameWeight2">
-                    {ModalInfo && ModalInfo.active}
+                    {ModalInfo && ModalInfo?.posit_nm}
                   </div>
                 </div>
                 <div>
@@ -106,7 +106,7 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
                 <div>
                   <span className="modal-span">담당업무</span>
                   <span className="modal-span2">
-                    {ModalInfo && ModalInfo.action}
+                    {ModalInfo && ModalInfo?.adi_info7}
                   </span>
                 </div>
                 <div

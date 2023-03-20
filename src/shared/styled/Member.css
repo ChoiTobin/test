@@ -123,9 +123,9 @@
 }
 .green2-top{
     position: relative;
-    top: 3%;
+    top: 1%;
     width:95%;
-    height: 80%;
+    height: 85%;
     border-radius: 10px;
     padding-bottom: 2%;
     padding-top: 4%;
@@ -205,9 +205,22 @@ ming width도 1700으로 잡기
  범위  1535 밑에 글자를 픽셀 줄이기 - 1200까지
 
  */
+ @media only screen and (min-width:1536px) {
+    .EM-name3{
+        font-size: 15px;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 23px;
+    }
+    .EM-name{
+        font-size: 15px;
+    }
+}
 @media only screen and (min-width:1200px) and (max-width:1535px){
     .EM-name3{
-        font-size: 7px;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
     }
     .EM-name{
         font-size: 15px;
@@ -240,7 +253,7 @@ ming width도 1700으로 잡기
         display: none;
     }
     .green2-top{
-        padding-top:6%;
+        padding-top:1%;
         padding-bottom:6%;
     }
     .img-hight{

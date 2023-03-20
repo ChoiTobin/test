@@ -7,6 +7,7 @@ import TeamInfo from "../pages/TeamInfo";
 import Notice from "../pages/Notice";
 import Gallery from "../pages/Gallery";
 import Promote from "../pages/Promote";
+import SlideTest from "../pages/SlideTest";
 function Router() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/Notice" element={<Notice />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/Promote" element={<Promote />} />
+      <Route path="/SlideTest" element={<SlideTest/>}/>
     </Routes>
   );
 }

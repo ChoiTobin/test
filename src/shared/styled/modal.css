@@ -164,3 +164,9 @@
     right: 200px;
     bottom:390px;
 }
+.modal-span2{
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

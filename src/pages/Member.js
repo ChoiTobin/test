@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./../shared/styled/modal.css";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -16,126 +16,14 @@ import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
 import ModalBox from "../shared/modal/ModalBox";
 function Member() {
-  let arr0 = [
-    {
-      name: "최승환",
-      active: "대표",
-      number: "010-1234-4567",
-      action: "업무 총괄",
-      id: 1,
-      Team: "대표",
-    },
-  ];
-  let arr1 = [
-    {
-      name: "윤상원",
-      active: "부장",
-      number: "010-1234-4567",
-      action: "경영기획부 업무 총괄",
-      id: 1,
-      Team: "경영기획부",
-    },
-    {
-      name: "김영희",
-      active: "사원",
-      number: "010-1234-4567",
-      action: "홍보 담당",
-      id: 2,
-    },
-  ];
-  let arr2 = [
-    {
-      name: "임지현",
-      active: "차장",
-      number: "010-1234-4567",
-      action: "플랫폼사업부 업무 총괄",
-      id: 1,
-      Team: "플랫폼사업부",
-    },
-    {
-      name: "최현욱",
-      active: "대리",
-      number: "010-1234-4567",
-      action: "소프트웨어 개발/유지관리",
-      id: 2,
-    },
-    {
-      name: "최유진",
-      active: "주임",
-      number: "010-1234-4567",
-      action: "제품 디자인 콘텐츠 담당",
-      id: 3,
-    },
-    {
-      name: "신정우",
-      active: "연구원",
-      number: "010-1234-4567",
-      action: "소프트웨어 개발/유지관리",
-      id: 4,
-    },
-    {
-      name: "최토빈",
-      active: "인턴",
-      number: "010-1234-4567",
-      action: "소프트웨어 개발/유지관리",
-      id: 5,
-    },
-  ];
-  let arr3 = [
-    {
-      name: "최재식",
-      active: "부장",
-      number: "010-1234-4567",
-      action: "생산기술부 업무 총괄",
-      id: 1,
-      Team: "생산기술부",
-    },
-    {
-      name: "김영수",
-      active: "",
-      number: "010-1234-4567",
-      action: "생산기술부 업무 보조",
-      id: 2,
-    },
-  ];
-  let arr4 = [
-    {
-      name: "김미자",
-      active: "부장",
-      number: "010-1234-4567",
-      action: "홍보담당",
-      id: 1,
-      Team: "홍보부",
-    },
-    {
-      name: "김동일",
-      active: "차장",
-      number: "010-1234-4567",
-      action: "홍보담당",
-      id: 2,
-    },
-    {
-      name: "박정훈",
-      active: "대리",
-      number: "010-1234-4567",
-      action: "홍보담당",
-      id: 3,
-    },
-    {
-      name: "정찬희",
-      active: "연구원",
-      number: "010-1234-4567",
-      action: "홍보 담당",
-      id: 4,
-    },
-  ];
-
+  
   const backgroundImg = img1;
   const backgroundImg2 = Green;
   const backgroundImg3 = necklace;
 
   const [open, setOpen] = React.useState(false);
-  const [ModalInfo, setModalInfo] = useState([]);
+
+  const [ModalInfo, setModalInfo] = useState(null);
 
   const style = {
     position: "absolute",
@@ -149,7 +37,20 @@ function Member() {
     boxShadow: 2,
   };
 
+  let [MemberData,setMemberDate] = useState(null)
+  // 어떤데이터가 들어올지 모를때는 null을사용
+
+  useEffect(() => {
+    fetch(process.env.REACT_APP_URL)
+    .then((response) => response.json())
+    .then((data) => {
+      setMemberDate(data["teams"])
+    });
+  }, []);
+
+  
   function handleOpen(e) {
+    console.log(e)
     setModalInfo(e);
     setOpen(true);
   }
@@ -169,7 +70,7 @@ function Member() {
           </div>
           <div
             className="Member-box1-center"
-            onClick={() => handleOpen(arr0[0])}
+            onClick={() => handleOpen(MemberData?.[0].mate[0])}
           >
             <div className="job-Card-flex" name="최승환">
               <div>
@@ -182,9 +83,12 @@ function Member() {
                 ></div>
               </div>
               <div>
-                <span className="name">최승환</span>
-                <span className="name2">대표</span>
-                <div className="name3">업무 총괄</div>
+                <span className="name">{
+                  MemberData?.[0].mate[0].usr_nm
+                }
+                </span>
+                <span className="name2">{MemberData?.[0].mate[0].posit_nm}</span>
+                <div className="name3">{MemberData?.[0].mate[0].adi_info7}</div>
               </div>
               <div
                 style={{
@@ -204,19 +108,18 @@ function Member() {
           open={open}
           setOpen={setOpen}
         />
-
         <Swiper slidesPerView={3} className="mySwiper">
           <SwiperSlide>
-            <MemberCard Team={arr1} />
+            <MemberCard  Team2={MemberData?.[1]} />
           </SwiperSlide>
           <SwiperSlide>
-            <MemberCard Team={arr2} />
+            <MemberCard  Team2={MemberData?.[2]}/>
           </SwiperSlide>
           <SwiperSlide>
-            <MemberCard Team={arr3} />
+            <MemberCard  Team2={MemberData?.[3]}/>
           </SwiperSlide>
           <SwiperSlide>
-            <MemberCard Team={arr4} />
+            <MemberCard  Team2={MemberData?.[4]}/>
           </SwiperSlide>
         </Swiper>
       </div>
