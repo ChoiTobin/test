@@ -57,3 +57,22 @@
     margin-right: 3px;
     margin-top: 7px;
 }
+
+
+
+@media only screen and (min-width:600px) and (max-width:899px){
+.header-top-font{
+    font-size: 25px;
+}
+.header-top-left-image{
+    width: 30px;
+    height: 30px;
+}
+.time{
+    font-size: 20px;
+    padding-top: 20px;
+}
+.header-top-right-time{
+    margin-top:5px
+}
+}

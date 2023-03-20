@@ -1,3 +1,4 @@
+
 #app {
     height: 100%;
   }
@@ -92,12 +93,12 @@
 }
 .img-hight{
     
-    width: 4vw;
+    width: 60px;
     height: 6vh;
 }
 .img-hight2{
     
-    width: 5vw;
+    width: 70px;
     height: 9vh;
 }
 .job-Card-flex{
@@ -134,7 +135,7 @@
 }
 
 .green2{
-    width: 1.2vw;
+    width: 20px;
     height:2vh;
     position: absolute;
     top: 0%;
@@ -143,15 +144,16 @@
 
 .EM-name{
     font-weight: 800;
+    font-size: 20px;
 }
 .EM-name2{
-    font-size:0.7vw;
+    font-size:13px
 
 
 }
 .EM-name3{
     line-height: 43px;
-    font-size: 1.5vh;
+    font-size: 13px;
     text-align: left;
 
 
@@ -164,7 +166,7 @@
     border-radius: 10px;
     background-color: white;
     height: 11vh;
-    width: 10.3vw;
+
 
 }
 .job-box-employee-container{
@@ -185,3 +187,174 @@
 .oneBoxSizing{
     width: 30%;
 }
+
+
+/* max width를 1713px로 잡기 
+ming width도 1700으로 잡기
+*/
+/* min width는 1700이면 1700이상~  */
+/* max width는 1700이면 0~1700까지 */
+/* 브레이크 포인트는? */
+/* 그리고 화면 크기 지정은 예를 들면 320px보다 크고 480px보다 작을 때, 이런 식으로 정할 수도 있다. 이렇게.
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+}
+ */
+
+ /* 
+ 바꿀것들 이미지
+ 범위  1535 밑에 글자를 픽셀 줄이기 - 1200까지
+
+ */
+@media only screen and (min-width:1200px) and (max-width:1535px){
+    .EM-name3{
+        font-size: 7px;
+    }
+    .EM-name{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width:1199px){
+    .EM-name3{
+        font-size: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .EM-name2{
+        font-size: 5px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .EM-name{
+        font-size: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .green2{
+        display: none;
+    }
+    .green{
+        display: none;
+    }
+    .green2-top{
+        padding-top:6%;
+        padding-bottom:6%;
+    }
+    .img-hight{
+        width: 50px;
+    }
+    .img-hight2{
+        width: 70px;
+        margin-right: 5px;
+    }
+    .name3{
+        font-size:12px;
+        text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    }
+    .Member-box1-center{
+        height: 13%;
+    }
+    .job-Card-flex{
+        top:1%;
+        height: 96%;
+    }
+    .job-EM-box{
+        height: 12vh;
+    }
+    .green2-top{
+        top:1%;
+        padding-bottom: 10%;
+        
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:899px){
+        .img-hight2{
+            width: 0px;
+            height: 0px;
+        }
+        .green{
+            display: none;
+        }
+        .green2{
+            display: none;
+        }
+        .img-hight{
+            display: none;
+        }
+        .EM-name3{
+            display: none;
+        }
+        .green2-top{
+            height: 90%;
+            top:0%;
+            padding-bottom:5%;
+        }
+        .job-Card-flex{
+            top:0%;
+            height: 97%;
+
+        }
+        .name3{
+            font-size:10px
+        }
+        .EM-name2{
+            font-size: 15px;
+            color: gray;
+        }
+
+    }
+@media only screen and (min-width:374px) and (max-width:599px){
+
+.img-hight{
+    display: none;
+}
+.img-hight2{
+    display: none;
+}
+.name3{
+    font-size: 10px;
+}
+.EM-name3{
+    display: none;
+}
+.header-top-font{
+    font-size: 28px;
+}
+.header-top-left-image{
+    width: 30px;
+    height: 30px;
+}
+.header-top-right{
+    font-size: 16px;
+    height: 30%;
+
+}
+.header-top-right-time{
+    display: none;
+}
+.green2-top{
+    top:0%;
+    height: 92%;
+}
+.green2{
+    display: none;
+}
+.EM-name{
+    font-size: 15px;
+}
+.job-EM-box{
+    height: 7vh;
+}
+.job-Card-flex{
+    top:0%;
+    height: 96%;
+
+
+}
+    }

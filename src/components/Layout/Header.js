@@ -48,7 +48,7 @@ function Header(props) {
                 <AccessTimeIcon  className="header-top-right-clock"></AccessTimeIcon>
               </div>
               <div>
-              <span>{sum}</span>
+              <span className="time">{sum}</span>
               </div>
             </div>
         </Box>

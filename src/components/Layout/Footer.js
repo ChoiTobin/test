@@ -29,7 +29,14 @@ function Footer() {
       "& .Mui-selected": {
         backgroundColor: "transparent",
         color: "gold",
+      },
+      "& .css-imwso6-MuiBottomNavigationAction-label.Mui-selected":{
+      fontSize:"10px"
+      },
+      "& .css-imwso6-MuiBottomNavigationAction-label":{
+        fontSize:"11px"
       }
+
   }
   });
   

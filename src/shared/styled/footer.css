@@ -28,3 +28,27 @@
 }
 /* footer-right */
 
+@media only screen and (min-width:600px) and (max-width:899px){
+
+    .footer-border-box-left{
+        display: none;
+    }
+    .footer-border-box-right{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:374px) and (max-width:599px){
+
+    .footer-border-box-left{
+        display: none;
+    }
+    .footer-border-box-right{
+       display: flex;
+       flex-direction: row;
+       width: 100%;
+       overflow: scroll;
+
+    }
+    
+}
