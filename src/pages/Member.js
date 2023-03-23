@@ -112,7 +112,7 @@ function Member() {
           setOpen={setOpen}
         />
         <Swiper 
-        slidesPerView={3} 
+        slidesPerView={MemberData.length-2} 
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -137,10 +137,6 @@ function Member() {
 }
 
 export default Member;
-      // map을 돌려서 arr숫자 1~4까지  -완료
-      // memberData?.length-memberData.length-1 =1
-      // memberData?.length-1 =4 이데이터들 값을 state로 관리하면 유동적으로 변화해서 컴포넌트 많이 
-      // 생성할 필요가 없지않을까?
-      // state로 6까지 해놓고 6일떄 case로 spacebettewen을 몇으로 주고 마진이나 이렇게 해서
-      // 그리고 swiper slide 뿌려주기
+// 유동적인 변화는 됬는데 
+//유동적으로 변화했을때 css를 또 잡아줘야한다.
       
