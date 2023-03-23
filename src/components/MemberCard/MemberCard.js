@@ -4,8 +4,7 @@ import Green from "../../image/Green.png";
 import necklace from "../../image/necklace.png";
 import ModalBox from "../../shared/modal/ModalBox";
 function MemberCard({ Team,Team2 }) {
-  
-  
+
   const backgroundImg = img1;
   const backgroundImg2 = Green;
   const backgroundImg3 = necklace;
@@ -63,7 +62,7 @@ function MemberCard({ Team,Team2 }) {
           <div className="job-box-employee-container">
             <div className="job-EM-box">
               <div className="green2-top">
-               <div> 
+                <div> 
                 <div className="job-EM-border" onClick={() => handleOpen(item)}>
                   <div
                     className="img-hight"

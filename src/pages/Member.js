@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./../shared/styled/modal.css";
-// Swiper
+// Swipe
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "../../src/shared/styled/Member.css";
@@ -15,14 +16,14 @@ import necklace from "../image/necklace.png";
 import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
 import ModalBox from "../shared/modal/ModalBox";
-function Member() {
-  
+
+
+function Member() {  
   const backgroundImg = img1;
   const backgroundImg2 = Green;
   const backgroundImg3 = necklace;
 
   const [open, setOpen] = React.useState(false);
-
   const [ModalInfo, setModalInfo] = useState(null);
 
   const style = {
@@ -39,25 +40,28 @@ function Member() {
 
   let [MemberData,setMemberDate] = useState(null)
   // 어떤데이터가 들어올지 모를때는 null을사용
+  let arrTeam =[]
+  
 
   useEffect(() => {
     fetch(process.env.REACT_APP_URL)
     .then((response) => response.json())
     .then((data) => {
-      setMemberDate(data["teams"])
+      setMemberDate(data["teams"])    
     });
   }, []);
 
   
   function handleOpen(e) {
-    console.log(e)
     setModalInfo(e);
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
-
   // 미니모달
   const [open2, setOpen2] = React.useState(false);
+
+
+  console.log(MemberData)
 
   return (
     <>
@@ -108,7 +112,15 @@ function Member() {
           open={open}
           setOpen={setOpen}
         />
-        <Swiper slidesPerView={3} className="mySwiper">
+        <Swiper 
+        slidesPerView={3} 
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+        className="mySwiper">
+              
           <SwiperSlide>
             <MemberCard  Team2={MemberData?.[1]} />
           </SwiperSlide>

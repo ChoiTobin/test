@@ -103,7 +103,7 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
                   <span className="modal-span">팩스번호</span>
                   <span>010-****-****</span>
                 </div>
-                <div>
+                <div className="modalWidth">
                   <span className="modal-span">담당업무</span>
                   <span className="modal-span2">
                     {ModalInfo && ModalInfo?.adi_info7}

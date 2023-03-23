@@ -1,14 +1,19 @@
 import React,{useState,useRef} from "react"
 import "../shared/styled/SlideTest.css"
-function SlideTest(){
- let testNumber= useRef(0)
- console.log(window.offsetX)
 
-return(
+function SlideTest(){
+
+
+    const homeRef = useRef(null);
+    const onHomeClick = () => {
+        homeRef.current?.scrollIntoView({behavior:"smooth"})
+ }
+
+ return(
 
         <>
-        <div className="box0" style={{ height: "90vh",display:"flex" }}>
-
+        <div ref={homeRef} className="box0" style={{ height: "90vh",display:"flex" }}>
+            <button  onClick={onHomeClick}></button>
         </div>
         </>
     )
