@@ -61,7 +61,6 @@ function Member() {
   const [open2, setOpen2] = React.useState(false);
 
 
-  console.log(MemberData)
 
   return (
     <>
@@ -115,28 +114,33 @@ function Member() {
         <Swiper 
         slidesPerView={3} 
         autoplay={{
-          delay: 6000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
         className="mySwiper">
-              
-          <SwiperSlide>
-            <MemberCard  Team2={MemberData?.[1]} />
+          
+        {
+          MemberData?.slice(1,MemberData.length).map((item,i)=>(
+            <SwiperSlide key={i}>
+            <MemberCard  Team2={MemberData?.[i+1]} />
           </SwiperSlide>
-          <SwiperSlide>
-            <MemberCard  Team2={MemberData?.[2]}/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <MemberCard  Team2={MemberData?.[3]}/>
-          </SwiperSlide>
-          <SwiperSlide>
-            <MemberCard  Team2={MemberData?.[4]}/>
-          </SwiperSlide>
-        </Swiper>
+            ))
+            //첫번쨰부터 MemberData에 length까지만 배열을 자르면 4개가 나온다. 
+            //그다음 여전히 MemberData는 5개기 때문에 i +1 을하면 위에 때문에 원래 있던 5개가 아닌 
+            //4개가 나오기 떄문에 1~4가나온다.
+        }
+          </Swiper>
       </div>
     </>
   );
 }
 
 export default Member;
+      // map을 돌려서 arr숫자 1~4까지  -완료
+      // memberData?.length-memberData.length-1 =1
+      // memberData?.length-1 =4 이데이터들 값을 state로 관리하면 유동적으로 변화해서 컴포넌트 많이 
+      // 생성할 필요가 없지않을까?
+      // state로 6까지 해놓고 6일떄 case로 spacebettewen을 몇으로 주고 마진이나 이렇게 해서
+      // 그리고 swiper slide 뿌려주기
+      
