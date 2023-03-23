@@ -61,11 +61,24 @@ function Member() {
   const [open2, setOpen2] = React.useState(false);
 
 
+  let numberState = MemberData?.length-1
+
+  // 클래스네임 을 바꿔주자. 1번일떄 화면에서 클래스 다른걸로 하고 
+  //greentop{1}이렇게 변수로 넣어주기
+  //처음에는 1번 2번 3번 4번 5번 6번 Memberdata.length-1을 지금은 쓰지말고 1번일떄 
+  //css 클래스명{1이렇게 해서} 넣어주기 그다음 변수에 담아서 -1쓰기.
+
+  // 어디어디 클래스 줘야하는지랑 클래스명 이름
+
+  //ex) 변수선언해서 memberData.length-1을 하나 두고 
+  //
+
+
+
 
   return (
     <>
       <Header str="차세대ICT융합센터" />
-
       <div style={{ height: "80vh", display: "flex" }} className="over">
         <div className="oneBoxSizing">
           <div className="Title-Member-box0">
@@ -112,19 +125,23 @@ function Member() {
           setOpen={setOpen}
         />
         <Swiper 
-        slidesPerView={MemberData.length-2} 
+        slidesPerView={3}
+        //MemberData.length-1 를 위에 넣으면된다.
+        // 몇개를 보여줄까? lenfth -1 
         autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
+        delay: 8000,
+        disableOnInteraction: false,
         }}
         modules={[Autoplay]}
         className="mySwiper">
           
         {
           MemberData?.slice(1,MemberData.length).map((item,i)=>(
+            <>
             <SwiperSlide key={i}>
-            <MemberCard  Team2={MemberData?.[i+1]} />
-          </SwiperSlide>
+              <MemberCard  Team2={MemberData?.[i+1]} />
+            </SwiperSlide>
+          </>
             ))
             //첫번쨰부터 MemberData에 length까지만 배열을 자르면 4개가 나온다. 
             //그다음 여전히 MemberData는 5개기 때문에 i +1 을하면 위에 때문에 원래 있던 5개가 아닌 
@@ -137,6 +154,8 @@ function Member() {
 }
 
 export default Member;
-// 유동적인 변화는 됬는데 
+
+//유동적인 변화는 됬는데 
 //유동적으로 변화했을때 css를 또 잡아줘야한다.
-      
+//sliderperView가 
+//slidesPerView가 1이면 이클래스네임 2면 저 클래스네임 state를 props로 내려준다 2일때 내려주면 그 스타일을 적용하기 

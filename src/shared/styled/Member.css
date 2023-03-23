@@ -277,7 +277,7 @@ ming width도 1700으로 잡기
         line-height: 32px;
     }
     .img-hight{
-        width: 50px;
+        width: 70px;
     }
     .img-hight2{
         width: 70px;
@@ -371,10 +371,7 @@ ming width도 1700으로 잡기
 .header-top-right-time{
     display: none;
 }
-.green2-top{
-    top:0%;
-    height: 92%;
-}
+
 .green2{
     display: none;
 }
@@ -391,3 +388,21 @@ ming width도 1700으로 잡기
 
 }
     }
+/* 1 화면일때   */
+/* 크기 3일때적당. */
+.green2-top{
+    top:2%;
+    height: 92%;
+    width: 96%;
+    padding-top: 0%;
+    padding-bottom:0%;
+}
+
+/* max는 5까지고 */
+/*
+1만 고치면 될듯 1이면 클래스 네임 바꾸자.
+5는 폰트 줄이기 
+
+MemberData.length-1 이 1이면 클래스네임을 바꾼다.
+대표님 데이터를 컴포넌트 안쪽으로 넣으면 안될려나?
+*/
