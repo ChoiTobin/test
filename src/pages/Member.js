@@ -60,8 +60,14 @@ function Member() {
   // 미니모달
   const [open2, setOpen2] = React.useState(false);
 
+  let [changeClassName,setchangeClassName] = useState({})
 
+  // 객체형식으로 클래스네임에 접근하기 state랑 setstate props로 넘겨줘야함.
   let numberState = MemberData?.length-1
+
+  if(numberState ==1){
+    setchangeClassName()
+  }
 
   // 클래스네임 을 바꿔주자. 1번일떄 화면에서 클래스 다른걸로 하고 
   //greentop{1}이렇게 변수로 넣어주기
@@ -125,7 +131,7 @@ function Member() {
           setOpen={setOpen}
         />
         <Swiper 
-        slidesPerView={3}
+        slidesPerView={numberState}
         //MemberData.length-1 를 위에 넣으면된다.
         // 몇개를 보여줄까? lenfth -1 
         autoplay={{
