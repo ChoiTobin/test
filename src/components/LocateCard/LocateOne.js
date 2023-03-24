@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../LocateCard/LocateOne.css";
-import Carousel from "react-bootstrap/Carousel";
 import img1 from "../../image/HOME.png";
 import img2 from "../../image/HOME2.png";
 import img3 from "../../image/HOME3.png";
