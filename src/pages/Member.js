@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./../shared/styled/modal.css";
 // Swipe
-import { Autoplay } from "swiper";
+import { Autoplay,Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/scrollbar"
+
+
+// css
 import "../../src/shared/styled/Member.css";
 // mui
 import Box from "@mui/material/Box";
@@ -59,34 +63,12 @@ function Member() {
   const handleClose = () => setOpen(false);
   // 미니모달
   const [open2, setOpen2] = React.useState(false);
-
-  let [changeClassName,setchangeClassName] = useState({})
-
-  // 객체형식으로 클래스네임에 접근하기 state랑 setstate props로 넘겨줘야함.
-  let numberState = MemberData?.length-1
-
-  if(numberState ==1){
-    setchangeClassName()
-  }
-
-  // 클래스네임 을 바꿔주자. 1번일떄 화면에서 클래스 다른걸로 하고 
-  //greentop{1}이렇게 변수로 넣어주기
-  //처음에는 1번 2번 3번 4번 5번 6번 Memberdata.length-1을 지금은 쓰지말고 1번일떄 
-  //css 클래스명{1이렇게 해서} 넣어주기 그다음 변수에 담아서 -1쓰기.
-
-  // 어디어디 클래스 줘야하는지랑 클래스명 이름
-
-  //ex) 변수선언해서 memberData.length-1을 하나 두고 
-  //
-
-
-
-
+  let numberState =MemberData?.length-2
   return (
     <>
       <Header str="차세대ICT융합센터" />
       <div style={{ height: "80vh", display: "flex" }} className="over">
-        <div className="oneBoxSizing">
+        <div className={numberState ==1 ? "twoBoxSizing" : "oneBoxSizing"}>
           <div className="Title-Member-box0">
             <span className="Title-Member-box1-center">대표</span>
           </div>
@@ -132,13 +114,16 @@ function Member() {
         />
         <Swiper 
         slidesPerView={numberState}
-        //MemberData.length-1 를 위에 넣으면된다.
-        // 몇개를 보여줄까? lenfth -1 
+        slideToClickedSlide={true}
         autoplay={{
-        delay: 8000,
+        delay: 4000,
         disableOnInteraction: false,
+        
         }}
-        modules={[Autoplay]}
+
+        modules={[Autoplay,Scrollbar]}
+        scrollbar={{ draggable: true, dragSize: 24 }}
+
         className="mySwiper">
           
         {
@@ -149,9 +134,7 @@ function Member() {
             </SwiperSlide>
           </>
             ))
-            //첫번쨰부터 MemberData에 length까지만 배열을 자르면 4개가 나온다. 
-            //그다음 여전히 MemberData는 5개기 때문에 i +1 을하면 위에 때문에 원래 있던 5개가 아닌 
-            //4개가 나오기 떄문에 1~4가나온다.
+
         }
           </Swiper>
       </div>
