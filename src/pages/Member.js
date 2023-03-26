@@ -22,6 +22,8 @@ import Header from "../components/Layout/Header";
 import ModalBox from "../shared/modal/ModalBox";
 
 
+
+
 function Member() {  
   const backgroundImg = img1;
   const backgroundImg2 = Green;
@@ -51,7 +53,8 @@ function Member() {
     fetch(process.env.REACT_APP_URL)
     .then((response) => response.json())
     .then((data) => {
-      setMemberDate(data["teams"])    
+      setMemberDate(data["teams"])
+
     });
   }, []);
 

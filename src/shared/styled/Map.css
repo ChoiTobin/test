@@ -1,3 +1,11 @@
-.box0-map{
+.box0-map {
     background-color: white;
-}
+    overflow-x: auto; /* 수정 */
+    white-space: nowrap; /* 수정 */
+  }
+  
+  .slide-image {
+    display: inline-block; /* 추가 */
+    width: 100%;
+    height: 100%;
+  }
