@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import "../shared/styled/Map.css";
 import img1 from "../image/HOME.png";
 import img2 from "../image/HOME2.png";
@@ -35,9 +35,23 @@ let onMouseMove = () => {
 const DomRef = useRef()
 
 
-let {scrollLeft} = DomRef.current || {};
 
-console.log(scrollLeft)
+
+
+useEffect(() => {
+  const wheelHandler = (e) => {
+    e.preventDefault();
+    // 스크롤 행동 구현
+  };
+  const DOMCURRENT = DomRef.current;
+  DOMCURRENT.addEventListener("wheel", wheelHandler);
+  return () => {
+    DOMCURRENT.removeEventListener("wheel", wheelHandler);
+  };
+}, []);
+// 이부분을 휠말고 다른걸로 구현.
+//https://codingbroker.tistory.com/128
+
 
 
   return (
