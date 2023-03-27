@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import img1 from "../../image/FACE.png";
 import Green from "../../image/Green.png";
 import necklace from "../../image/necklace.png";
 import ModalBox from "../../shared/modal/ModalBox";
+
+
 function MemberCard({ Team,Team2 }) {
 
   const backgroundImg = img1;
@@ -17,6 +19,10 @@ function MemberCard({ Team,Team2 }) {
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
+
+
+
+  
 
   return (
     <>
@@ -56,8 +62,9 @@ function MemberCard({ Team,Team2 }) {
           </div>
         </div>
       </div>
+      {
+        Team2?.mate.slice(1).map((item, i) => (
 
-      {Team2?.mate.slice(1).map((item, i) => (
         <div key={i} className="Member-container">
           <div className="job-box-employee-container">
             <div className="job-EM-box">
@@ -91,6 +98,8 @@ function MemberCard({ Team,Team2 }) {
             </div>
           </div>
         </div>
+
+        
       ))}
     </>
   );

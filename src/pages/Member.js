@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import "./../shared/styled/modal.css";
 // Swipe
 import { Autoplay,Scrollbar } from "swiper";
@@ -20,7 +20,6 @@ import necklace from "../image/necklace.png";
 import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
 import ModalBox from "../shared/modal/ModalBox";
-
 
 
 
@@ -67,6 +66,15 @@ function Member() {
   // 미니모달
   const [open2, setOpen2] = React.useState(false);
   let numberState =MemberData?.length-2
+
+const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
+const dragComponentRef = useRef(null); // // 움직일 드래그 박스 Ref
+const [originPos, setOriginPos] = useState({ x: 0, y: 0 }); // 드래그 전 포지션값 (e.target.offset의 상대 위치)
+const [clientPos, setClientPos] = useState({ x: 0, y: 0 }); // 실시간 커서위치인 e.client를 갱신하는값
+const [pos, setPos] = useState({ left: 0, top: 0 }); // 실제 drag할 요소가 위치하는 포지션값
+
+
+
   return (
     <>
       <Header str="차세대ICT융합센터" />
@@ -121,25 +129,20 @@ function Member() {
         autoplay={{
         delay: 4000,
         disableOnInteraction: false,
-        
         }}
-
         modules={[Autoplay,Scrollbar]}
         scrollbar={{ draggable: true, dragSize: 24 }}
-
         className="mySwiper">
-          
         {
           MemberData?.slice(1,MemberData.length).map((item,i)=>(
             <>
-            <SwiperSlide key={i}>
-              <MemberCard  Team2={MemberData?.[i+1]} />
+            <SwiperSlide key={i} className="container" ref={containerRef} >
+              <MemberCard Team2={MemberData?.[i+1]} />
             </SwiperSlide>
           </>
-            ))
-
+          ))
         }
-          </Swiper>
+        </Swiper>
       </div>
     </>
   );
