@@ -1,8 +1,8 @@
 import React, { useState, useRef,useEffect } from "react";
 import styled from 'styled-components';
 import Header from '../components/Layout/Header'
+import MapCard from "../components/MapCard/MapCard";
 import MemberCard from "../components/MemberCard/MemberCard";
-
 
 function Map() {
   let [MemberData,setMemberDate] = useState(null)
@@ -70,6 +70,7 @@ let onDragMove  = (e) => {
 function arrName (i,item) {
   setNumber(`-${i}00`)
 }
+console.log(MemberData)
 
   return (
     <>
@@ -104,18 +105,9 @@ function arrName (i,item) {
                     }}
                     >
                     <Test0>
-                      <Test1>타이틀</Test1>
-                      <Test2>테스트1</Test2>
-                      <Test3>테스트2</Test3>
-                      <Test3>테스트3</Test3>
-                      <Test3>테스트4</Test3>
-                      <Test3>테스트3</Test3>
-                      <Test3>테스트4</Test3>
-                      <Test3>테스트3</Test3>
-                      <Test3>테스트4</Test3>
-                      <Test3>테스트3</Test3>
-                      <Test3>테스트4</Test3>
-
+                      <Test1>{item.team_nm}</Test1>
+                      <Test2>{item.mate[0].usr_nm}</Test2>
+                      <MapCard item={item.mate}/>
                     </Test0>
                 </MapSlider>
                 ))}
@@ -159,9 +151,6 @@ const MiniContainerBox = styled.div`
 const MiniContainerBoxCollect = styled.div`
   padding:10px;
   `
-
-
-
 const MapContainer = styled.div`
   width: 80%;
   height: 100%;
@@ -171,20 +160,19 @@ const MapContainer = styled.div`
 const MapSlider = styled.div`
   display: inline-block;
   width: 30%;
-  height: 100%;
   transition: all 1s;
   `
   const Test0 = styled.div`
-  background-Color:blue;  
   display:flex;
   flex-wrap:wrap;
+  height:100%;
   `
   const Test1 = styled.div`
-  width: 50%;
+  width: 100%;
+  
   `
   const Test2 = styled.div`
-  width: 40%;
-  height: 10%;
+  width: 100%;
   background-Color:yellow;
 
   `
