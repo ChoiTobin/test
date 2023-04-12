@@ -6,7 +6,7 @@ import HomeBoxCard from "../components/HomeCard/HomeBoxCard";
 function Home() {
   return (
     <>
-      <Header str="차세대ICT융합센터"/>
+      <Header str="블로그"/>
       <div className="box0" style={{ height: "80vh", display: "flex" }}>
         <HomeFontCard />
         <div className="box3" style={{ display: "flex" }}>

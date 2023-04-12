@@ -5,8 +5,6 @@ import { Autoplay,Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar"
-
-
 // css
 import "../../src/shared/styled/Member.css";
 // mui
@@ -24,6 +22,126 @@ import ModalBox from "../shared/modal/ModalBox";
 
 
 function Member() {  
+  let data = 
+    {
+      section_fullcode: "NICC000-NICC001",
+      section_pass: "12345",
+      teams: [
+      {
+      team_cd: "T000010",
+      team_nm: "대표",
+      mate: [
+      {
+      st_no: 1945,
+      usr_nm: "React",
+      posit_nm: "대표언어",
+      adi_info7: "다루는정도",
+    
+      }
+      ]
+      },
+      {
+      team_cd: "T000020",
+      team_nm: "경영기획부",
+      mate: [
+      {
+      st_no: 1946,
+      usr_nm: "JS",
+      posit_nm: "사용언어",
+      adi_info7: "다루는정도",
+      },
+      {
+      st_no: 1953,
+      usr_nm: "TypeScript",
+      posit_nm: "사용언어",
+      adi_info7: "다루는 정도",
+      }
+      ]
+      },
+      {
+      team_cd: "T000030",
+      team_nm: "플랫폼사업부",
+      mate: [
+      {
+      st_no: 1947,
+      usr_nm: "HTML",
+      posit_nm: "차장",
+      adi_info7: "플랫폼사업부 업무 총괄",
+
+      },
+      {
+      st_no: 1949,
+      usr_nm: "CSS",
+      posit_nm: "대리",
+      adi_info7: "••소프트웨어 개발\r\n•한눈에조직도 유지관리 및 신규기능 개발",
+      },
+      {
+      st_no: 1950,
+      usr_nm: "StyleComponents",
+      posit_nm: "주임",
+      adi_info7: "각종 디자인 콘텐츠 담당\r\n영상콘텐츠 제작",
+
+      },
+      {
+      st_no: 1951,
+      usr_nm: "???",
+      posit_nm: "???",
+      adi_info7: "???",
+      }
+      ]
+      },
+      {
+      team_cd: "T000040",
+      team_nm: "생산기술부",
+      mate: [
+      {
+      st_no: 1948,
+      usr_nm: "git",
+      posit_nm: "??",
+      adi_info7: "??",
+      },
+      {
+      st_no: 1954,
+      usr_nm: "zira",
+      posit_nm: "",
+      adi_info7: "??",
+      }
+      ]
+      },
+      {
+      team_cd: "T000050",
+      team_nm: "홍보부",
+      mate: [
+      {
+      st_no: 1957,
+
+      usr_nm: "redux",
+      posit_nm: "부장",
+      adi_info7: "홍보담당",
+      },
+      {
+      st_no: 1958,
+      usr_nm: "Next",
+      posit_nm: "",
+      adi_info7: "",
+      },
+      {
+      st_no: 1959,
+      usr_nm: "webpack",
+      posit_nm: "",
+      adi_info7: "",
+      },
+      {
+      st_no: 1960,
+      usr_nm: "",
+      posit_nm: "",
+      adi_info7: "",
+      }
+      ]
+      }
+      ]
+      }
+  
   const backgroundImg = img1;
   const backgroundImg2 = Green;
   const backgroundImg3 = necklace;
@@ -49,12 +167,7 @@ function Member() {
   
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_URL)
-    .then((response) => response.json())
-    .then((data) => {
-      setMemberDate(data["teams"])
-
-    });
+    setMemberDate(data["teams"])
   }, []);
 
   
@@ -68,16 +181,11 @@ function Member() {
   let numberState =MemberData?.length-2
 
 const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
-const dragComponentRef = useRef(null); // // 움직일 드래그 박스 Ref
-const [originPos, setOriginPos] = useState({ x: 0, y: 0 }); // 드래그 전 포지션값 (e.target.offset의 상대 위치)
-const [clientPos, setClientPos] = useState({ x: 0, y: 0 }); // 실시간 커서위치인 e.client를 갱신하는값
-const [pos, setPos] = useState({ left: 0, top: 0 }); // 실제 drag할 요소가 위치하는 포지션값
-
 
 
   return (
     <>
-      <Header str="차세대ICT융합센터" />
+      <Header str="기술언어" />
       <div style={{ height: "80vh", display: "flex" }} className="over">
         <div className={numberState ==1 ? "twoBoxSizing" : "oneBoxSizing"}>
           <div className="Title-Member-box0">
