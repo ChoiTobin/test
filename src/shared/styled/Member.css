@@ -83,17 +83,18 @@
     
 }
 .Member-box1-center{
-    background-color: white;
+    /* background-color: white; */
     width: 90%;
     height: 15%;
     margin: 0 auto;
     border-radius: 10px;
     
 }
-.name{
-    font-size: 20px;
+.React-name{
+    font-size: 45px;
+    line-height: 30px;
     font-weight: 800;
-    
+    color: white;
 }
 .name2{
     font-size:7px;
@@ -114,10 +115,13 @@
     width: 60px;
     height: 6vh;
 }
+.img-hight-react{
+    width: 120px;
+    height: 80px;
+}
 .img-hight2{
-    
-    width: 70px;
-    height: 9vh;
+    width: 110px;
+    height: 60px;
 }
 .job-Card-flex{
     display: flex;
@@ -132,13 +136,13 @@
     top: 3%;
 }
 /* 사원 밑  */
-.green{
+/* .green{
     width: 20px;
     height:20px;
     position: absolute;
     top: 0%;
     right: 0%;
-}
+} */
 .green2-top{
     position: relative;
     top: 3%;
@@ -150,14 +154,6 @@
     margin: 0 auto;
     border: 2px solid gray;
 
-}
-
-.green2{
-    width: 20px;
-    height:2vh;
-    position: absolute;
-    top: 0%;
-    right: 0%;
 }
 
 .EM-name{
@@ -184,7 +180,7 @@
 }
 .job-EM-box{
     border-radius: 10px;
-    background-color: white;
+    /* background-color: white; */
     height: 11vh;
 }
 .job-box-employee-container{
@@ -262,12 +258,7 @@ ming width도 1700으로 잡기
     .EM-name{
         font-size: 15px;
     }
-    .green2-top{
-        position: relative;
-        top:2%;
-        height: 83%;
-        width: 93%;
-    }
+
 
 
 }
@@ -292,12 +283,7 @@ ming width도 1700으로 잡기
         overflow: hidden;
         white-space: nowrap;
     }
-    .green2{
-        display: none;
-    }
-    .green{
-        display: none;
-    }
+
     .green2-top{
         position: relative;
         top:3%;
@@ -340,12 +326,7 @@ ming width도 1700으로 잡기
             width: 0px;
             height: 0px;
         }
-        .green{
-            display: none;
-        }
-        .green2{
-            display: none;
-        }
+
         .img-hight{
             display: none;
         }
@@ -401,9 +382,7 @@ ming width도 1700으로 잡기
     display: none;
 }
 
-.green2{
-    display: none;
-}
+
 .EM-name{
     font-size: 15px;
 }

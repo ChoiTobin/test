@@ -17,7 +17,6 @@ function HomeBoxCard() {
     box11:true,
     box12:true,
   })
-  console.log(selectPointer)
 
 
 
@@ -39,18 +38,18 @@ function HomeBoxCard() {
             >
             <div className="box8-1">
               <div>
-                <h2>부서소개</h2>
+                <h2>경력소개</h2>
               </div>
               <div  style={{ display: "flex", fontSize: "12px" }}>
                 <div className="box8-font">
-                  부서의 업무를 과별로 구분하여 <br /> 한눈에 알아볼 수 있도록
-                  소개합니다.
+                <div style={{fontSize:"17px"}}>Introduce career</div>
+                Presenting one's work experience and qualifications.
                 </div>
                 <div className="box8-relative" >
                   <BusinessCenterIcon
                   className="box8-son"
                     sx={{
-                      color: "rgb(178, 115, 33)",
+                      color: "gold",
                       marginLeft: "20px",
                       marginTop: "40px",
                       width: "100px",
@@ -73,19 +72,19 @@ function HomeBoxCard() {
             }}>
             <div className="box9-1">
               <div>
-                <h2>직원안내</h2>
+                <h2>사용 언어</h2>
               </div>
               <div  style={{ display: "flex", fontSize: "12px" }}>
                 <div className="box9-font">
-                  좌석배치도 및 담당자와 주요 업무를
-                  <br /> 소개합니다.
+                Possible languages to use.
+                  <br /> 
                 </div>
                 <div className="box8-relative">
                   <KeyboardIcon
                   className="box9-son"
                     sx={{
-                      color: "white",
-                      marginLeft: "20px",
+                      color: "gold",
+                      marginLeft: "110px",
                       marginTop: "40px",
                       width: "100px",
                       height: "60px",
@@ -165,7 +164,7 @@ function HomeBoxCard() {
             </div>
           </div>
           <div
-            className="box12"
+
             className={selectPointer["box12"] ==true ? 'box12' : 'box12Change'}
           onClick={() => {
             setSelectPointer({...selectPointer,box12:false});

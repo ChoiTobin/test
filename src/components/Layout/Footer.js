@@ -74,8 +74,11 @@ function Footer() {
         <Box sx={{ height: "10vh", bgcolor: "black", opacity: "0.9", display: "flex" }}>
           <div className='footer-border-box-left'>
             <div className='footer-border-box-left-center'>
-              <Marquee speed={80} gradient={false} className="footer-border-box-style">
-                <span className='footer-border'>비대면 시대 고민... "한눈에 조직도"가 해결사</span>
+              <Marquee speed={70} gradient={false} className="footer-border-box-style">
+                <span className='footer-border'>
+                &nbsp;&nbsp;&nbsp;Tobin Choi,&nbsp;
+                new Front-End dev passionate about user-friendly web interfaces and learning from experienced devs.
+                </span>
               </Marquee>
             </div>
           </div>
@@ -94,7 +97,7 @@ function Footer() {
                 }}>
                 <BottomNavigationAction  onClick={()=>{navigate('/')}} sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="처음으로" icon={<HomeIcon sx={{ color: value === 0 ? "gold" : "white" }} />} />
                   
-                <BottomNavigationAction onClick={()=>{navigate('/Member')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="직원안내" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/Member')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="사용언어" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
 
                 <BottomNavigationAction onClick={()=>{navigate('/Locate')}} sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="청사안내" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
 
@@ -104,7 +107,7 @@ function Footer() {
 
                 <BottomNavigationAction  onClick={()=>{navigate('/Notice')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction onClick={()=>{navigate('/TeamInfo')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="부서소개" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/TeamInfo')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="경력소개" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
               </BottomNavigation>
             </Box>
           </div>

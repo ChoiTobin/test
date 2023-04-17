@@ -11,7 +11,7 @@ import "../../src/shared/styled/Member.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 // img
-import img1 from "../image/FACE.png";
+import img1 from "../image/React.png";
 import Green from "../image/Green.png";
 import necklace from "../image/necklace.png";
 // components
@@ -42,7 +42,7 @@ function Member() {
       },
       {
       team_cd: "T000020",
-      team_nm: "경영기획부",
+      team_nm: "JavaScript",
       mate: [
       {
       st_no: 1946,
@@ -60,7 +60,7 @@ function Member() {
       },
       {
       team_cd: "T000030",
-      team_nm: "플랫폼사업부",
+      team_nm: "Markup and Stylesheet",
       mate: [
       {
       st_no: 1947,
@@ -92,7 +92,7 @@ function Member() {
       },
       {
       team_cd: "T000040",
-      team_nm: "생산기술부",
+      team_nm: "Development Tools",
       mate: [
       {
       st_no: 1948,
@@ -110,7 +110,7 @@ function Member() {
       },
       {
       team_cd: "T000050",
-      team_nm: "홍보부",
+      team_nm: "JavaScript libraries",
       mate: [
       {
       st_no: 1957,
@@ -185,20 +185,20 @@ const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
 
   return (
     <>
-      <Header str="기술언어" />
+      <Header str="programming language" />
       <div style={{ height: "80vh", display: "flex" }} className="over">
         <div className={numberState ==1 ? "twoBoxSizing" : "oneBoxSizing"}>
           <div className="Title-Member-box0">
-            <span className="Title-Member-box1-center">대표</span>
+            <span className="Title-Member-box1-center">Most Used Language</span>
           </div>
           <div
             className="Member-box1-center"
             onClick={() => handleOpen(MemberData?.[0].mate[0])}
           >
-            <div className="job-Card-flex" name="최승환">
+            <div className="job-Card-flex" name="React">
               <div>
                 <div
-                  className="img-hight2"
+                  className="img-hight-react"
                   style={{
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundSize: "cover",
@@ -206,12 +206,12 @@ const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
                 ></div>
               </div>
               <div>
-                <span className="name">{
+                <span className="React-name">{
                   MemberData?.[0].mate[0].usr_nm
                 }
                 </span>
-                <span className="name2">{MemberData?.[0].mate[0].posit_nm}</span>
-                <div className="name3">{MemberData?.[0].mate[0].adi_info7}</div>
+
+
               </div>
               <div
                 style={{
@@ -257,8 +257,3 @@ const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
 }
 
 export default Member;
-
-//유동적인 변화는 됬는데 
-//유동적으로 변화했을때 css를 또 잡아줘야한다.
-//sliderperView가 
-//slidesPerView가 1이면 이클래스네임 2면 저 클래스네임 state를 props로 내려준다 2일때 내려주면 그 스타일을 적용하기 

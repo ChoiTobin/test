@@ -1,7 +1,7 @@
 import React, { useEffect,useState,useCallback } from 'react'
 import Footer from './Footer'
 import Container from "@mui/material/Container";
-import img1 from "../../image/HOME.png";
+import img1 from "../../image/Background.png";
 import img2 from "../../image/HOME2.png";
 import img3 from "../../image/HOME3.png";
 import img4 from "../../image/HOME4.png";
@@ -9,9 +9,10 @@ import img5 from "../../image/HOME5.png";
 import { useLocation } from 'react-router-dom';
 
 function Layout({children}) {
-const backgroundArr = [img1,img2,img3,img4,img5]
+const backgroundArr = [img1]
 const getRandomIndex = useCallback(() => {
-return Math.floor(Math.random() * backgroundArr.length);
+// return Math.floor(Math.random() * backgroundArr.length);
+return backgroundArr.length-1;
 }, [backgroundArr]);
 const randomIndex = getRandomIndex();
 const backgroundImg = backgroundArr[randomIndex]
@@ -25,7 +26,7 @@ useEffect(() => {
 return (
 <>
         <Container fixed maxWidth="xl" disableGutters>
-                <div style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover" }}>
+                <div style={{backgroundImage:`url(${backgroundImg})` ,backgroundSize: "cover"}}>
                         {children}
                 </div>
                 <Footer/>
