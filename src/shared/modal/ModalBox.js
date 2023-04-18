@@ -59,7 +59,7 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
       >
         <Box sx={style}>
           <div className="modal-top-container">
-            <div className="modal-top-font">좌석위치보기</div>
+            <div className="modal-top-font"></div>
             <div
               className="modal-neck"
               style={{
@@ -96,15 +96,15 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
                   </div>
                 </div>
                 <div>
-                  <span className="modal-span">전화번호</span>
-                  <span>010-****-****</span>
+                  <span className="modal-span">기술 언어</span>
+                  <span>{ModalInfo?.usr_nm}</span>
                 </div>
                 <div>
-                  <span className="modal-span">팩스번호</span>
-                  <span>010-****-****</span>
+                  <span className="modal-span">카테고리</span>
+                  <span>{ModalInfo?.posit_nm}</span>
                 </div>
                 <div className="modalWidth">
-                  <span className="modal-span">담당업무</span>
+                  <span className="modal-span">숙련도</span>
                   <span className="modal-span2">
                     {ModalInfo && ModalInfo?.adi_info7}
                   </span>
@@ -113,13 +113,13 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
                   className="modal-box-shadow"
                   onClick={() => setOpen2(true)}
                 >
-                  담당업무 전체보기{" "}
+                  숙련도 자세히 보기{" "}
                 </div>
               </div>
             </div>
             <div className="modal-footer-line">
-              <div className="modal-footer-span">재실</div>
-              <div className="modal-footer-span">부재</div>
+              <div className="modal-footer-span"></div>
+              <div className="modal-footer-span"></div>
             </div>
           </div>
         </Box>

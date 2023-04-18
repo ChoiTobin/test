@@ -90,7 +90,7 @@
     border-radius: 10px;
     
 }
-.React-name{
+.skill-name{
     font-size: 45px;
     line-height: 30px;
     font-weight: 800;
@@ -110,19 +110,29 @@
 
 
 }
-.img-hight{
-    
-    width: 60px;
-    height: 6vh;
-}
+
 .img-hight-react{
     width: 120px;
     height: 80px;
 }
-.img-hight2{
-    width: 110px;
-    height: 60px;
+.img-hight-Skill{
+    width: 90px;
+    height: 90px;
 }
+
+.miniBox-Skill-Language{
+    color:white;
+    font-size: 30px;
+    font-weight: 700;
+    word-wrap: normal;
+    overflow : hidden;
+    line-height: 80px;
+    margin: 0 auto;
+ 
+    
+
+}
+
 .job-Card-flex{
     display: flex;
     border: 2px solid orange;
@@ -135,6 +145,8 @@
     position: relative;
     top: 3%;
 }
+
+
 /* 사원 밑  */
 /* .green{
     width: 20px;
@@ -187,10 +199,10 @@
     margin-top: 7%;
 }
 .job-EM-border{
-
+    display: flex;
     margin: 0 auto;
     /* align-items: center; */
-    display: flex;
+
 }
 .Member-container{
     display: inline-block;

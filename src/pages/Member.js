@@ -11,9 +11,15 @@ import "../../src/shared/styled/Member.css";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 // img
-import img1 from "../image/React.png";
+import ReactImage from "../image/React.png";
 import Green from "../image/Green.png";
 import necklace from "../image/necklace.png";
+import JsImage from"../image/JS.png"
+import CssImage from "../image/CSS.png"
+import HtmlImage from "../image/HTML.png"
+import GitImage from"../image/Git.png"
+import ReduxImage from"../image/Redux.png"
+import StyledComponentImage from"../image/styledComponents.png"
 // components
 import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
@@ -35,29 +41,57 @@ function Member() {
       st_no: 1945,
       usr_nm: "React",
       posit_nm: "대표언어",
-      adi_info7: "다루는정도",
+      adi_info7: "웹소켓,CRUD 로그인 회원가입 가능",
     
       }
       ]
       },
+      
+      {
+        team_cd: "T000050",
+        team_nm: "JavaScript libraries",
+        mate: [
+        {
+        st_no: 1957,
+  
+        usr_nm: "Redux Toolkit",
+        posit_nm: "libraries",
+        adi_info7: "Thunk 활용 및 Http 전역상태 관리",
+        img:ReduxImage
+        },
+        
+        ]
+        },
+        {
+          team_cd: "T000040",
+          team_nm: "Development Tools",
+          mate: [
+          {
+          st_no: 1948,
+          usr_nm: "Git",
+          posit_nm: "Development Tools ",
+          adi_info7: "Git Flow 협업 가능",
+          img:GitImage
+          },
+          ]
+          },
       {
       team_cd: "T000020",
       team_nm: "JavaScript",
+      
       mate: [
       {
       st_no: 1946,
       usr_nm: "JS",
-      posit_nm: "사용언어",
-      adi_info7: "다루는정도",
+      posit_nm: "JavaScript",
+      adi_info7: "TodoList 제작 가능",
+      img:JsImage
       },
-      {
-      st_no: 1953,
-      usr_nm: "TypeScript",
-      posit_nm: "사용언어",
-      adi_info7: "다루는 정도",
-      }
+
       ]
       },
+      
+      
       {
       team_cd: "T000030",
       team_nm: "Markup and Stylesheet",
@@ -65,8 +99,9 @@ function Member() {
       {
       st_no: 1947,
       usr_nm: "HTML",
-      posit_nm: "차장",
-      adi_info7: "플랫폼사업부 업무 총괄",
+      posit_nm: "Markup and Stylesheet",
+      adi_info7: "기본적인 웹프레임 설계 가능",
+      img:HtmlImage
 
       },
       {
@@ -74,75 +109,24 @@ function Member() {
       usr_nm: "CSS",
       posit_nm: "대리",
       adi_info7: "••소프트웨어 개발\r\n•한눈에조직도 유지관리 및 신규기능 개발",
-      },
+      img:CssImage  
+    },
       {
       st_no: 1950,
-      usr_nm: "StyleComponents",
+      usr_nm: "CSS-in-JS",
       posit_nm: "주임",
       adi_info7: "각종 디자인 콘텐츠 담당\r\n영상콘텐츠 제작",
+      img:StyledComponentImage
+      },
 
-      },
-      {
-      st_no: 1951,
-      usr_nm: "???",
-      posit_nm: "???",
-      adi_info7: "???",
-      }
       ]
       },
-      {
-      team_cd: "T000040",
-      team_nm: "Development Tools",
-      mate: [
-      {
-      st_no: 1948,
-      usr_nm: "git",
-      posit_nm: "??",
-      adi_info7: "??",
-      },
-      {
-      st_no: 1954,
-      usr_nm: "zira",
-      posit_nm: "",
-      adi_info7: "??",
-      }
-      ]
-      },
-      {
-      team_cd: "T000050",
-      team_nm: "JavaScript libraries",
-      mate: [
-      {
-      st_no: 1957,
+     
 
-      usr_nm: "redux",
-      posit_nm: "부장",
-      adi_info7: "홍보담당",
-      },
-      {
-      st_no: 1958,
-      usr_nm: "Next",
-      posit_nm: "",
-      adi_info7: "",
-      },
-      {
-      st_no: 1959,
-      usr_nm: "webpack",
-      posit_nm: "",
-      adi_info7: "",
-      },
-      {
-      st_no: 1960,
-      usr_nm: "",
-      posit_nm: "",
-      adi_info7: "",
-      }
-      ]
-      }
       ]
       }
   
-  const backgroundImg = img1;
+  const backgroundImg = ReactImage;
   const backgroundImg2 = Green;
   const backgroundImg3 = necklace;
 
@@ -163,7 +147,7 @@ function Member() {
 
   let [MemberData,setMemberDate] = useState(null)
   // 어떤데이터가 들어올지 모를때는 null을사용
-  let arrTeam =[]
+
   
 
   useEffect(() => {
@@ -200,13 +184,13 @@ const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
                 <div
                   className="img-hight-react"
                   style={{
-                    backgroundImage: `url(${backgroundImg})`,
+                    backgroundImage: `url(${ReactImage})`,
                     backgroundSize: "cover",
                   }}
                 ></div>
               </div>
               <div>
-                <span className="React-name">{
+                <span className="skill-name">{
                   MemberData?.[0].mate[0].usr_nm
                 }
                 </span>
