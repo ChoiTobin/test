@@ -14,7 +14,7 @@ function Locate() {
 
   return (
     <>
-      <Header str="Portfolio Video"/>
+      <Header str="Photo Zone"/>
       <div className="box0" style={{ height: "80vh", display: "flex" }}>
         <div className="Locate-container">
           <div className="Locate-box">
