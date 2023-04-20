@@ -1,49 +1,40 @@
 import React, { useState } from "react";
 import "../LocateCard/LocateOne.css";
-import img1 from "../../image/HOME.png";
-import img2 from "../../image/HOME2.png";
-import img3 from "../../image/HOME3.png";
-import img4 from "../../image/HOME4.png";
-import img5 from "../../image/HOME5.png";
+import HTML from "../../image/StarbucksHTML.png";
+import HTML2 from "../../image/StarbucksHTML2.png";
+import JavaScript from "../../image/JavaScript.png";
+import HangHae from "../../image/HangHae.png";
+import HangHae2 from "../../image/HangHae2.png";
 import ImageSlider from "./ImageSlider";
 
 function LocateOne() {
   let arrDate = [
     {
-        name:"종합안내",
-        img:img2,
+        name:"HTML Project ",
+        img:HTML,
         id:0   
        },
     {
-      name: "1층",
-      img: img1,
+      name: "HTML Project Footer",
+      img:HTML2,
       id: 1,
     },
     {
-      name: "2층",
-      img: img2,
+      name: "JavaScript TodoList",
+      img: JavaScript,
       id: 2,
     },
     {
-      name: "3층",
-      img: img3,
+      name: "Bootcamp",
+      img: HangHae,
       id: 3,
     },
     {
-      name: "4층",
-      img: img4,
+      name: "Growth Award",
+      img: HangHae2,
       id: 4,
     },
-    {
-      name: "2층 2",
-      img: img5,
-      id: 5,
-    },
-    {
-      name: "2층 1",
-      img: img1,
-      id: 6,
-    },
+
   ];
 
   const containerStyles = {
@@ -76,8 +67,8 @@ function LocateOne() {
         <div className="Locate-box-left">
           <div className="Locate-box-left-baby">
             <div className="LocateOne-border">
-              <span className="LocateOne-border-baby">본관 </span>
-              <span className="LocateOne-border-baby2">층별안내</span>
+              <span className="LocateOne-border-baby">Achievements </span>
+              <span className="LocateOne-border-baby2"></span>
             </div>
             {arrDate.map((item, i) => (
               <div onClick={() => goToSlide(item.id)} key={i} className="LocateOne-min-border">

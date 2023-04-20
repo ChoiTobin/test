@@ -20,6 +20,8 @@ import HtmlImage from "../image/HTML.png"
 import GitImage from"../image/Git.png"
 import ReduxImage from"../image/Redux.png"
 import StyledComponentImage from"../image/styledComponents.png"
+import LightHouse from"../image/LightHouse.png"
+import Vercel from"../image/Vercel.png"
 // components
 import MemberCard from "../components/MemberCard/MemberCard";
 import Header from "../components/Layout/Header";
@@ -42,7 +44,7 @@ function Member() {
       usr_nm: "React",
       posit_nm: "대표언어",
       adi_info7: "웹소켓,CRUD 로그인 회원가입 가능",
-    
+      img:ReactImage
       }
       ]
       },
@@ -72,9 +74,21 @@ function Member() {
           posit_nm: "Development Tools ",
           adi_info7: "Git Flow 협업 가능",
           img:GitImage
-          },
-          ]
-          },
+          },{
+            st_no: 1948,
+            usr_nm: "Vercel",
+            posit_nm: "Development Tools ",
+            adi_info7: "배포 및 도메인 환경설정",
+            img:Vercel
+            },{
+              st_no: 1948,
+              usr_nm: "LightHouse",
+              posit_nm: "Development Tools ",
+              adi_info7: "성능 측정 및 성능 개선",
+              img:LightHouse
+              },
+          ],
+        },
       {
       team_cd: "T000020",
       team_nm: "JavaScript",
@@ -107,15 +121,15 @@ function Member() {
       {
       st_no: 1949,
       usr_nm: "CSS",
-      posit_nm: "대리",
-      adi_info7: "••소프트웨어 개발\r\n•한눈에조직도 유지관리 및 신규기능 개발",
+      posit_nm: "Markup and Stylesheet",
+      adi_info7: "반응형,flex,레이아웃 가능",
       img:CssImage  
     },
       {
       st_no: 1950,
       usr_nm: "CSS-in-JS",
-      posit_nm: "주임",
-      adi_info7: "각종 디자인 콘텐츠 담당\r\n영상콘텐츠 제작",
+      posit_nm: "Markup and Stylesheet",
+      adi_info7: "기본적인 스타일링 가능",
       img:StyledComponentImage
       },
 

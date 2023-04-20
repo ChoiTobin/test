@@ -26,6 +26,7 @@ function MemberCard({ Team,Team2 }) {
 
   return (
     <>
+      {/* modal */}
       <ModalBox
         handleClose={handleClose}
         ModalInfo={ModalInfo}
@@ -34,6 +35,8 @@ function MemberCard({ Team,Team2 }) {
         open={open}
       ></ModalBox>
 
+      
+      {/* Most Used Language 제외 큰박스 */}
       <div className="Title-Member-box1">
         <span className="Title-Member-box1-center">{Team2?.team_nm}</span>
       </div>
@@ -50,8 +53,6 @@ function MemberCard({ Team,Team2 }) {
           </div>
           <div>
             <span className="skill-name">{Team2?.mate[0].usr_nm}</span>
-           
-
           </div>
         </div>
       </div>
@@ -71,10 +72,9 @@ function MemberCard({ Team,Team2 }) {
               </div>
             </div>
           </div>
-        </div>
-
-        
-      ))}
+        </div>        
+      ))
+      }
     </>
   );
 }

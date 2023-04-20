@@ -10,32 +10,32 @@ import ImageSlider from "./ImageSlider";
 function LocateTwo() {
   let arrDate = [
     {
-     name:"종합안내",
+     name:"0",
      img:img2,
      id:0   
     },
     {
-      name: "1층",
+      name: "1",
       img: img1,
       id: 1,
     },
     {
-      name: "2층",
+      name: "2",
       img: img2,
       id: 2,
     },
     {
-      name: "3층",
+      name: "3",
       img: img3,
       id: 3,
     },
     {
-      name: "4층",
+      name: "4",
       img: img2,
       id: 4,
     },
     {
-      name: "5층",
+      name: "5",
       img: img5,
       id: 5,
     },
@@ -69,8 +69,8 @@ function LocateTwo() {
         <div className="Locate-box-left">
           <div className="Locate-box-left-baby">
             <div className="LocateOne-border">
-              <span className="LocateOne-border-baby">별관 </span>
-              <span className="LocateOne-border-baby2">층별안내</span>
+              <span className="LocateOne-border-baby">페이지 </span>
+              <span className="LocateOne-border-baby2">준비중</span>
             </div>
 
             {arrDate.map((item, i) => (

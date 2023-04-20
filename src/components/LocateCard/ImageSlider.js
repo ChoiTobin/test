@@ -66,7 +66,7 @@ const ImageSlider = ({ slides, DotChange, setDotChange, slideIndex }) => {
         <span>{slides[currentIndex].name}</span>
       </div>
       <div className="LocateOne-font2">
-        민원 여권과,당직실,부동산정보과,로비
+        
       </div>
 
       <div style={leftArrowStyles} onClick={goToprevious}>
@@ -76,6 +76,7 @@ const ImageSlider = ({ slides, DotChange, setDotChange, slideIndex }) => {
         {str[1]}
       </div>
       <div style={slideStyles}></div>
+      
     </div>
   );
 };

@@ -81,7 +81,7 @@ function ModalBox({ handleClose, setOpen, setModalInfo, ModalInfo, open }) {
               <div
                 className="modal-img"
                 style={{
-                  backgroundImage: `url(${backgroundImg})`,
+                  backgroundImage: `url(${ModalInfo?.img})`,
                   backgroundSize: "cover",
                 }}
               ></div>

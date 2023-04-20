@@ -14,16 +14,16 @@ function Locate() {
 
   return (
     <>
-      <Header str="청사안내"/>
+      <Header str="Portfolio Video"/>
       <div className="box0" style={{ height: "80vh", display: "flex" }}>
         <div className="Locate-container">
           <div className="Locate-box">
             <div className="Locate-top-div">
               <div onClick={locateFunction} className="Locate-button">
-                본관
+                Achievements
               </div>
               <div onClick={locateFunction} className="Locate-button">
-                별관
+              preparing
               </div>
             </div>
             {locateChange ? <LocateOne /> : <LocateTwo />}
