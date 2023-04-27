@@ -99,15 +99,15 @@ function Footer() {
                   
                 <BottomNavigationAction onClick={()=>{navigate('/Member')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="사용언어" icon={<KeyboardIcon sx={{ color: value === 1 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction onClick={()=>{navigate('/Locate')}} sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="청사안내" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/Locate')}} sx={{ color: "white" ,borderRight:"1px solid rgb(30,30,30)" }} label="준비중" icon={<LocationOnIcon sx={{ color: value === 2 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction onClick={()=>{navigate('/Promote')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="홍보콘텐츠" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/Promote')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="영상" icon={<OndemandVideoIcon sx={{ color: value === 3 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction onClick={()=>{navigate('/Gallery')}}  sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="포토갤러리" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/Gallery')}}  sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="준비중" icon={<InsertPhotoIcon sx={{ color: value === 4 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction  onClick={()=>{navigate('/Notice')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="공지사항" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
+                <BottomNavigationAction  onClick={()=>{navigate('/Notice')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="준비중" icon={<KeyboardVoiceIcon sx={{ color: value === 5 ? "gold" : "white" }} />} />
 
-                <BottomNavigationAction onClick={()=>{navigate('/TeamInfo')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="경력소개" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
+                <BottomNavigationAction onClick={()=>{navigate('/TeamInfo')}} sx={{ color: "white",borderRight:"1px solid rgb(30,30,30)" }} label="준비중" icon={<BusinessCenterIcon  sx={{ color: value === 6 ? "gold" : "white" }} />} />
               </BottomNavigation>
             </Box>
           </div>

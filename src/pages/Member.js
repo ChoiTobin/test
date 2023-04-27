@@ -183,7 +183,9 @@ const containerRef = useRef(null); // 드래그 할 영역 네모 박스 Ref
 
   return (
     <>
-      <Header str="programming language" />
+      <Header str="Click on the box
+
+" />
       <div style={{ height: "80vh", display: "flex" }} className="over">
         <div className={numberState ==1 ? "twoBoxSizing" : "oneBoxSizing"}>
           <div className="Title-Member-box0">

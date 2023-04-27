@@ -159,8 +159,8 @@ function HomeBoxCard() {
               ></RoomIcon>
             </div>
             <div>
-              <div>청사안내</div>
-              <div>Hall Infomation</div>
+              <div>준비중</div>
+              <div>준비중</div>
             </div>
           </div>
           <div
@@ -191,7 +191,7 @@ function HomeBoxCard() {
               ></MicIcon>
             </div>
             <div>
-              <div>공지사항</div>
+              <div>준비중</div>
               <div>Notice & News</div>
             </div>
           </div>

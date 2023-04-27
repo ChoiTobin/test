@@ -13,7 +13,7 @@ import "../shared/styled/TeamInfo.css";
 function TeamInfo() {
   return (
     <>
-      <Header str="부서소개" />
+      <Header str="준비중" />
       <div className="box0" style={{ height: "80vh" }}>
         <Swiper
           direction={"vertical"}
